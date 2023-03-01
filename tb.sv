@@ -222,6 +222,69 @@ module myFSM_test(
         hMove <= 4'h3; 
         @(posedge clock); 
         hMove <= 4'h4; 
+        
+                // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h6; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h9;
+        @(posedge clock); 
+        hMove <= 4'h3; 
+        @(posedge clock); 
+        hMove <= 4'h8; 
+        @(posedge clock); 
+
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h6; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h9;
+        @(posedge clock); 
+        hMove <= 4'h3; 
+        @(posedge clock); 
+        hMove <= 4'h7; 
+        @(posedge clock); 
+        hMove <= 4'h4; 
+        @(posedge clock); 
+
+
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h6; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h9;
+        @(posedge clock); 
+        hMove <= 4'h3; 
+        @(posedge clock); 
+        hMove <= 4'h2; 
+        @(posedge clock); 
+        hMove <= 4'h4; 
+        @(posedge clock); 
+        
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
 
 
 
