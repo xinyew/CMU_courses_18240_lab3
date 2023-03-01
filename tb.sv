@@ -134,6 +134,96 @@ module myFSM_test(
         //start
         hMove <= 4'h4;  // not 6 test
         @(posedge clock); // not 
+        
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h4;  // not 6 test
+        @(posedge clock); // not 
+
+
+
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h6; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h9;
+        @(posedge clock); 
+        hMove <= 4'h4; 
+
+
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h6; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h9;
+        @(posedge clock); 
+        hMove <= 4'h4; 
+
+
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h2; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h3;
+        @(posedge clock); 
+        hMove <= 4'h9; 
+
+
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h6; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h9;
+        @(posedge clock); 
+        hMove <= 4'h4; 
+
+        // reset the FSM
+        @(posedge clock); 
+        @(posedge clock); 
+        @(posedge clock);
+        reset <= 1'b1;
+        @(posedge clock); 
+        reset <= 1'b0; 
+        //start
+        hMove <= 4'h6; 
+        @(posedge clock); // not 7-2 test
+        hMove <= 4'h9;
+        @(posedge clock); 
+        hMove <= 4'h3; 
+        @(posedge clock); 
+        hMove <= 4'h4; 
+
+
 
 
         #1 $finish;
