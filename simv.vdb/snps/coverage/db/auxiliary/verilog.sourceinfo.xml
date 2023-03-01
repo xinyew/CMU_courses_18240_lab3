@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE cov SYSTEM "ucdb_srcinfo.dtd">
+  <srcinfo name="/afs/andrew.cmu.edu/usr24/xinyew/private/18240/18240_lab_3"  >
+    <ucapi_version  major_ver="13"  minor_ver="1"  patch_str="T-2022.06"  />
+      <fileinfo name="01_struc.sv"  id="0"  timestamp="1677638761"  />
+      <fileinfo name="02_abstract.sv"  id="1"  timestamp="1677638101"  />
+      <fileinfo name="HexDisplay.sv"  id="2"  timestamp="1675985746"  />
+      <fileinfo name="tb.sv"  id="3"  timestamp="1677638864"  />
+    </srcinfo>

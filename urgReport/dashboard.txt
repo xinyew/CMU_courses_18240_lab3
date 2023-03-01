@@ -1,0 +1,30 @@
+Dashboard
+
+Date: Tue Feb 28 21:50:08 2023
+
+User: xinyew
+
+Version: T-2022.06
+Command line: urg -dir simv.vdb -format text 
+
+Number of tests: 1
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE  LINE   
+ 47.28  47.28 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE  LINE   NAME                
+ 14.29  14.29 SevenSegmentDisplay 
+ 25.00  25.00 myAbstractFSM       
+100.00 100.00 testBench           
+
+
+-------------------------------------------------------------------------------
+Total Module Definition Coverage Summary 
+SCORE  LINE   
+ 46.25  46.25 
+

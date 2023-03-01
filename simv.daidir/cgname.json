@@ -5,11 +5,11 @@
         "module",
         1
     ],
-    "myAbstractFSM": [
-        "myAbstractFSM",
-        "p6HLE",
+    "testBench": [
+        "testBench",
+        "tk8zt",
         "module",
-        4
+        2
     ],
     "...MASTER...": [
         "SIM",

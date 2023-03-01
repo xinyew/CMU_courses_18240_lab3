@@ -1,5 +1,5 @@
 0 
-23
+24
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
@@ -22,6 +22,7 @@
 -picarchive
 -sverilog
 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/bin/vcs1
+tb1.sv
 02_abstract.sv
 67
 XMODIFIERS=@im=ibus
@@ -93,12 +94,13 @@ BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
 0
-1
-1677636338 02_abstract.sv
+2
+1677640084 02_abstract.sv
+1677640075 tb1.sv
 4
 1654054205 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvirsim.so
 1654053585 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/liberrorinf.so
 1654053489 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvfs.so
-1677636341 simv.daidir
+1677640101 simv.daidir
 -1 partitionlib
