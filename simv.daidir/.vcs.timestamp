@@ -1,5 +1,5 @@
 0 
-24
+27
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
@@ -17,13 +17,16 @@
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/include
 -Mxllcflags=
+-cm
 -gen_obj
--nc
 -picarchive
 -sverilog
 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/bin/vcs1
-tb1.sv
+fsm
+01_struc.sv
 02_abstract.sv
+HexDisplay.sv
+tb.sv
 67
 XMODIFIERS=@im=ibus
 XDG_VTNR=5
@@ -94,13 +97,16 @@ BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
 0
-2
-1677640084 02_abstract.sv
-1677640075 tb1.sv
+5
+1677640250 tb.sv
+1675985746 HexDisplay.sv
+1677641370 02_abstract.sv
+1677639580 01_struc.sv
+1654052736 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/include/cm_vcsd.tab
 4
 1654054205 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvirsim.so
 1654053585 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/liberrorinf.so
 1654053489 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvfs.so
-1677640101 simv.daidir
+1677641477 simv.daidir
 -1 partitionlib

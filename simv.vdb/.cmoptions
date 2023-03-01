@@ -1,7 +1,7 @@
 Instrument
 cond 0
-line 7
-fsm 0
+line 0
+fsm 65539
 tgl 0
 assign 0
 obc 0

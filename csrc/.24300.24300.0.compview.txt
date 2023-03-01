@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1677640318.830224814, "rt":0.32, "ut":0.11, "st":0.07}}
+{"vcselab":{"timestamp_begin":1677640319.175055925, "rt":0.25, "ut":0.11, "st":0.05}}
+{"link":{"timestamp_begin":1677640319.445789003, "rt":0.12, "ut":0.04, "st":0.05}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1677640318.707249488}
+{"VCS_COMP_START_TIME": 1677640318.707249488}
+{"VCS_COMP_END_TIME": 1677640319.604489724}
+{"VCS_USER_OPTIONS": "-sverilog -cm line -cm_line contassign 01_struc.sv 02_abstract.sv HexDisplay.sv tb.sv"}
+{"vcs1": {"peak_mem": 337352}}
+{"stitch_vcselab": {"peak_mem": 239048}}

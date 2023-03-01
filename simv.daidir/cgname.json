@@ -5,6 +5,18 @@
         "module",
         1
     ],
+    "myExplicitFSM": [
+        "myExplicitFSM",
+        "Mt37a",
+        "module",
+        5
+    ],
+    "SevenSegmentDisplay": [
+        "SevenSegmentDisplay",
+        "eIk01",
+        "module",
+        6
+    ],
     "testBench": [
         "testBench",
         "tk8zt",

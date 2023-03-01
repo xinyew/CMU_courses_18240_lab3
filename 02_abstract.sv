@@ -14,14 +14,22 @@ module myAbstractFSM (
   // next state generation
   always_comb
     unique case (currState)
-      S0:
-        nextState = (hMove == 4'h6) ? S0 : S1;
-      S1:
-        nextState = (hMove == 4'h9) ? S3 : S2;
+      S0: 
+        nextState = (hMove == 4'h6) ? S1 : S0;
+      S1: begin
+		  if (hMove == 4'h1 || hMove == 4'h5 || hMove == 4'h6)
+		    nextState = S1;
+		  else
+          nextState = (hMove == 4'h9) ? S3 : S2;
+		end	 
       S2:
         nextState = S2;
-      S3:
-        nextState = (hMove == 4'h2) ? S5 : S4;
+      S3: begin
+		  if (hMove == 4'h1 || hMove == 4'h4 || hMove == 4'h5 || hMove == 4'h6 || hMove == 4'h9)
+		    nextState = S3;
+		  else
+          nextState = (hMove == 4'h2) ? S5 : S4;
+		end
       S4:
         nextState = S4;
       S5:
@@ -31,6 +39,8 @@ module myAbstractFSM (
   
   // output generation
   always_comb begin
+	 cMove = 4'b0000;
+	 win = 1'b1;
     if (currState == S0) begin
       cMove = 4'h5;
       win = 0;
