@@ -2,22 +2,10 @@ Design Hierarchy
 
 
 ----------------
-SCORE  LINE                       
- 14.29  14.29 SevenSegmentDisplay 
- 25.00  25.00 myAbstractFSM       
-100.00 100.00 testBench           
+SCORE  FSM              
+ 80.00  80.00 testBench 
   
   ----------------
-  SCORE  LINE        
-  100.00 100.00 dut1 
-    
-    ----------------
-    SCORE  LINE       
-    100.00 100.00 ff0 
-    100.00 100.00 ff1 
-    100.00 100.00 ff2 
-  
-  ----------------
-  SCORE  LINE        
-  100.00 100.00 dut2 
+  SCORE  FSM         
+   80.00  80.00 dut1 
 

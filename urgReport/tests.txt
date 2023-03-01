@@ -1,8 +1,8 @@
 Tests
 
 Total Coverage Summary 
-SCORE  LINE   
- 47.28  47.28 
+SCORE  FSM    
+ 80.00  80.00 
 
 
 Total tests in report: 1

@@ -1,284 +1,8 @@
 ===============================================================================
-Module : SevenSegmentDisplay
-===============================================================================
-SCORE  LINE   
- 14.29  14.29 
-
-Source File(s) : 
-
-/afs/andrew.cmu.edu/usr24/xinyew/private/18240/18240_lab_3/HexDisplay.sv
-
-Module self-instances :
-
-SCORE  LINE   NAME                
- 14.29  14.29 SevenSegmentDisplay 
-
-
-
--------------------------------------------------------------------------------
-Line Coverage for Module : SevenSegmentDisplay
-
-             Line No.   Total   Covered  Percent
-TOTAL                      168       24    14.29
-ALWAYS              9       21        3    14.29
-ALWAYS             34       21        3    14.29
-ALWAYS             59       21        3    14.29
-ALWAYS             84       21        3    14.29
-ALWAYS            109       21        3    14.29
-ALWAYS            134       21        3    14.29
-ALWAYS            159       21        3    14.29
-ALWAYS            184       21        3    14.29
-
-8                         always_comb begin
-9          1/1              HEX0 = 7'b0000000;
-10         1/1              if (~blank[0])
-11         0/1     ==>        case (BCX0)
-12         0/1     ==>          4'h0: HEX0 = 7'b0111111;
-13         0/1     ==>          4'h1: HEX0 = 7'b0000110;
-14         0/1     ==>          4'h2: HEX0 = 7'b1011011;
-15         0/1     ==>          4'h3: HEX0 = 7'b1001111;
-16         0/1     ==>          4'h4: HEX0 = 7'b1100110;
-17         0/1     ==>          4'h5: HEX0 = 7'b1101101;
-18         0/1     ==>          4'h6: HEX0 = 7'b1111101;
-19         0/1     ==>          4'h7: HEX0 = 7'b0000111;
-20         0/1     ==>          4'h8: HEX0 = 7'b1111111;
-21         0/1     ==>          4'h9: HEX0 = 7'b1100111;
-22         0/1     ==>          4'ha: HEX0 = 7'b1110111;
-23         0/1     ==>          4'hb: HEX0 = 7'b1111100;
-24         0/1     ==>          4'hc: HEX0 = 7'b0111001;
-25         0/1     ==>          4'hd: HEX0 = 7'b1011110;
-26         0/1     ==>          4'he: HEX0 = 7'b1111001;
-27         0/1     ==>          4'hf: HEX0 = 7'b1110001;
-28         0/1     ==>          default: HEX0 = 7'b0000000;
-                        MISSING_ELSE
-29                            endcase
-30         1/1              HEX0 = ~HEX0;
-31                        end
-32                      
-33                        always_comb begin
-34         1/1              HEX1 = 7'b0000000;
-35         1/1              if (~blank[1])
-36         0/1     ==>        case (BCX1)
-37         0/1     ==>          4'd0: HEX1 = 7'b0111111;
-38         0/1     ==>          4'd1: HEX1 = 7'b0000110;
-39         0/1     ==>          4'd2: HEX1 = 7'b1011011;
-40         0/1     ==>          4'd3: HEX1 = 7'b1001111;
-41         0/1     ==>          4'd4: HEX1 = 7'b1100110;
-42         0/1     ==>          4'd5: HEX1 = 7'b1101101;
-43         0/1     ==>          4'd6: HEX1 = 7'b1111101;
-44         0/1     ==>          4'd7: HEX1 = 7'b0000111;
-45         0/1     ==>          4'd8: HEX1 = 7'b1111111;
-46         0/1     ==>          4'd9: HEX1 = 7'b1101111;
-47         0/1     ==>          4'ha: HEX1 = 7'b1110111;
-48         0/1     ==>          4'hb: HEX1 = 7'b1111100;
-49         0/1     ==>          4'hc: HEX1 = 7'b0111001;
-50         0/1     ==>          4'hd: HEX1 = 7'b1011110;
-51         0/1     ==>          4'he: HEX1 = 7'b1111001;
-52         0/1     ==>          4'hf: HEX1 = 7'b1110001;
-53         0/1     ==>          default: HEX1 = 7'b0000000;
-                        MISSING_ELSE
-54                            endcase
-55         1/1              HEX1 = ~HEX1;
-56                        end
-57                      
-58                        always_comb begin
-59         1/1              HEX2 = 7'b0000000;
-60         1/1              if (~blank[2])
-61         0/1     ==>        case (BCX2)
-62         0/1     ==>          4'd0: HEX2 = 7'b0111111;
-63         0/1     ==>          4'd1: HEX2 = 7'b0000110;
-64         0/1     ==>          4'd2: HEX2 = 7'b1011011;
-65         0/1     ==>          4'd3: HEX2 = 7'b1001111;
-66         0/1     ==>          4'd4: HEX2 = 7'b1100110;
-67         0/1     ==>          4'd5: HEX2 = 7'b1101101;
-68         0/1     ==>          4'd6: HEX2 = 7'b1111101;
-69         0/1     ==>          4'd7: HEX2 = 7'b0000111;
-70         0/1     ==>          4'd8: HEX2 = 7'b1111111;
-71         0/1     ==>          4'd9: HEX2 = 7'b1101111;
-72         0/1     ==>          4'ha: HEX2 = 7'b1110111;
-73         0/1     ==>          4'hb: HEX2 = 7'b1111100;
-74         0/1     ==>          4'hc: HEX2 = 7'b0111001;
-75         0/1     ==>          4'hd: HEX2 = 7'b1011110;
-76         0/1     ==>          4'he: HEX2 = 7'b1111001;
-77         0/1     ==>          4'hf: HEX2 = 7'b1110001;
-78         0/1     ==>          default: HEX2 = 7'b0000000;
-                        MISSING_ELSE
-79                            endcase
-80         1/1              HEX2 = ~HEX2;
-81                        end
-82                      
-83                        always_comb begin
-84         1/1              HEX3 = 7'b0000000;
-85         1/1              if (~blank[3])
-86         0/1     ==>        case (BCX3)
-87         0/1     ==>          4'd0: HEX3 = 7'b0111111;
-88         0/1     ==>          4'd1: HEX3 = 7'b0000110;
-89         0/1     ==>          4'd2: HEX3 = 7'b1011011;
-90         0/1     ==>          4'd3: HEX3 = 7'b1001111;
-91         0/1     ==>          4'd4: HEX3 = 7'b1100110;
-92         0/1     ==>          4'd5: HEX3 = 7'b1101101;
-93         0/1     ==>          4'd6: HEX3 = 7'b1111101;
-94         0/1     ==>          4'd7: HEX3 = 7'b0000111;
-95         0/1     ==>          4'd8: HEX3 = 7'b1111111;
-96         0/1     ==>          4'd9: HEX3 = 7'b1101111;
-97         0/1     ==>          4'ha: HEX3 = 7'b1110111;
-98         0/1     ==>          4'hb: HEX3 = 7'b1111100;
-99         0/1     ==>          4'hc: HEX3 = 7'b0111001;
-100        0/1     ==>          4'hd: HEX3 = 7'b1011110;
-101        0/1     ==>          4'he: HEX3 = 7'b1111001;
-102        0/1     ==>          4'hf: HEX3 = 7'b1110001;
-103        0/1     ==>          default: HEX3 = 7'b0000000;
-                        MISSING_ELSE
-104                           endcase
-105        1/1              HEX3 = ~HEX3;
-106                       end
-107                     
-108                       always_comb begin
-109        1/1              HEX4 = 7'b0000000;
-110        1/1              if (~blank[4])
-111        0/1     ==>        case (BCX4)
-112        0/1     ==>          4'd0: HEX4 = 7'b0111111;
-113        0/1     ==>          4'd1: HEX4 = 7'b0000110;
-114        0/1     ==>          4'd2: HEX4 = 7'b1011011;
-115        0/1     ==>          4'd3: HEX4 = 7'b1001111;
-116        0/1     ==>          4'd4: HEX4 = 7'b1100110;
-117        0/1     ==>          4'd5: HEX4 = 7'b1101101;
-118        0/1     ==>          4'd6: HEX4 = 7'b1111101;
-119        0/1     ==>          4'd7: HEX4 = 7'b0000111;
-120        0/1     ==>          4'd8: HEX4 = 7'b1111111;
-121        0/1     ==>          4'd9: HEX4 = 7'b1101111;
-122        0/1     ==>          4'ha: HEX4 = 7'b1110111;
-123        0/1     ==>          4'hb: HEX4 = 7'b1111100;
-124        0/1     ==>          4'hc: HEX4 = 7'b0111001;
-125        0/1     ==>          4'hd: HEX4 = 7'b1011110;
-126        0/1     ==>          4'he: HEX4 = 7'b1111001;
-127        0/1     ==>          4'hf: HEX4 = 7'b1110001;
-128        0/1     ==>          default: HEX4 = 7'b0000000;
-                        MISSING_ELSE
-129                           endcase
-130        1/1              HEX4 = ~HEX4;
-131                       end
-132                     
-133                       always_comb begin
-134        1/1              HEX5 = 7'b0000000;
-135        1/1              if (~blank[5])
-136        0/1     ==>        case (BCX5)
-137        0/1     ==>          4'd0: HEX5 = 7'b0111111;
-138        0/1     ==>          4'd1: HEX5 = 7'b0000110;
-139        0/1     ==>          4'd2: HEX5 = 7'b1011011;
-140        0/1     ==>          4'd3: HEX5 = 7'b1001111;
-141        0/1     ==>          4'd4: HEX5 = 7'b1100110;
-142        0/1     ==>          4'd5: HEX5 = 7'b1101101;
-143        0/1     ==>          4'd6: HEX5 = 7'b1111101;
-144        0/1     ==>          4'd7: HEX5 = 7'b0000111;
-145        0/1     ==>          4'd8: HEX5 = 7'b1111111;
-146        0/1     ==>          4'd9: HEX5 = 7'b1101111;
-147        0/1     ==>          4'ha: HEX5 = 7'b1110111;
-148        0/1     ==>          4'hb: HEX5 = 7'b1111100;
-149        0/1     ==>          4'hc: HEX5 = 7'b0111001;
-150        0/1     ==>          4'hd: HEX5 = 7'b1011110;
-151        0/1     ==>          4'he: HEX5 = 7'b1111001;
-152        0/1     ==>          4'hf: HEX5 = 7'b1110001;
-153        0/1     ==>          default: HEX5 = 7'b0000000;
-                        MISSING_ELSE
-154                           endcase
-155        1/1              HEX5 = ~HEX5;
-156                       end
-157                     
-158                       always_comb begin
-159        1/1              HEX6 = 7'b0000000;
-160        1/1              if (~blank[6])
-161        0/1     ==>        case (BCX6)
-162        0/1     ==>          4'd0: HEX6 = 7'b0111111;
-163        0/1     ==>          4'd1: HEX6 = 7'b0000110;
-164        0/1     ==>          4'd2: HEX6 = 7'b1011011;
-165        0/1     ==>          4'd3: HEX6 = 7'b1001111;
-166        0/1     ==>          4'd4: HEX6 = 7'b1100110;
-167        0/1     ==>          4'd5: HEX6 = 7'b1101101;
-168        0/1     ==>          4'd6: HEX6 = 7'b1111101;
-169        0/1     ==>          4'd7: HEX6 = 7'b0000111;
-170        0/1     ==>          4'd8: HEX6 = 7'b1111111;
-171        0/1     ==>          4'd9: HEX6 = 7'b1101111;
-172        0/1     ==>          4'ha: HEX6 = 7'b1110111;
-173        0/1     ==>          4'hb: HEX6 = 7'b1111100;
-174        0/1     ==>          4'hc: HEX6 = 7'b0111001;
-175        0/1     ==>          4'hd: HEX6 = 7'b1011110;
-176        0/1     ==>          4'he: HEX6 = 7'b1111001;
-177        0/1     ==>          4'hf: HEX6 = 7'b1110001;
-178        0/1     ==>          default: HEX6 = 7'b0000000;
-                        MISSING_ELSE
-179                           endcase
-180        1/1              HEX6 = ~HEX6;
-181                       end
-182                     
-183                       always_comb begin
-184        1/1              HEX7 = 7'b1111111;
-185        1/1              if (~blank[7])
-186        0/1     ==>        case (BCX7)
-187        0/1     ==>          4'd0: HEX7 = 7'b0111111;
-188        0/1     ==>          4'd1: HEX7 = 7'b0000110;
-189        0/1     ==>          4'd2: HEX7 = 7'b1011011;
-190        0/1     ==>          4'd3: HEX7 = 7'b1001111;
-191        0/1     ==>          4'd4: HEX7 = 7'b1100110;
-192        0/1     ==>          4'd5: HEX7 = 7'b1101101;
-193        0/1     ==>          4'd6: HEX7 = 7'b1111101;
-194        0/1     ==>          4'd7: HEX7 = 7'b0000111;
-195        0/1     ==>          4'd8: HEX7 = 7'b1111111;
-196        0/1     ==>          4'd9: HEX7 = 7'b1101111;
-197        0/1     ==>          4'ha: HEX7 = 7'b1110111;
-198        0/1     ==>          4'hb: HEX7 = 7'b1111100;
-199        0/1     ==>          4'hc: HEX7 = 7'b0111001;
-200        0/1     ==>          4'hd: HEX7 = 7'b1011110;
-201        0/1     ==>          4'he: HEX7 = 7'b1111001;
-202        0/1     ==>          4'hf: HEX7 = 7'b1110001;
-203        0/1     ==>          default: HEX7 = 7'b0000000;
-                        MISSING_ELSE
-204                           endcase
-205        1/1              HEX7 = ~HEX7;
-
--------------------------------------------------------------------------------
-===============================================================================
-Module Instance : SevenSegmentDisplay
-===============================================================================
-
-Instance :
-
-SCORE  LINE   
- 14.29  14.29 
-
-
-Instance's subtree :
-
-SCORE  LINE   
- 14.29  14.29 
-
-
-Module : 
-
-SCORE  LINE   NAME                
- 14.29  14.29 SevenSegmentDisplay 
-
-
-Parent : 
-
-none
-----------------
-
-
-Subtrees :
-
-
-no children
-----------------
-
-
--------------------------------------------------------------------------------
-Since this is the module's only instance, the coverage report is the same as for the module.
-===============================================================================
 Module : myAbstractFSM
 ===============================================================================
-SCORE  LINE   
- 25.00  25.00 
+SCORE  FSM    
+ 80.00  80.00 
 
 Source File(s) : 
 
@@ -286,585 +10,41 @@ Source File(s) :
 
 Module self-instances :
 
-SCORE  LINE   NAME          
- 25.00  25.00 myAbstractFSM 
+SCORE  FSM    NAME           
+ 80.00  80.00 testBench.dut1 
 
 
 
 -------------------------------------------------------------------------------
-Line Coverage for Module : myAbstractFSM
+FSM Coverage for Module : myAbstractFSM
+Summary for FSM :: currState
+            Total Covered Percent                         
+States      6     6       100.00  (Not included in score) 
+Transitions 10    8       80.00                           
+Sequences   0     0                                       
 
-             Line No.   Total   Covered  Percent
-TOTAL                       28        7    25.00
-ALWAYS             16        7        1    14.29
-ALWAYS             34       18        6    33.33
-ALWAYS             62        3        0     0.00
-
-15                        always_comb
-16         1/1              unique case (currState)
-17                            S0:
-18         0/1     ==>          nextState = (hMove == 4'h6) ? S0 : S1;
-19                            S1:
-20         0/1     ==>          nextState = (hMove == 4'h9) ? S3 : S2;
-21                            S2:
-22         0/1     ==>          nextState = S2;
-23                            S3:
-24         0/1     ==>          nextState = (hMove == 4'h2) ? S5 : S4;
-25                            S4:
-26         0/1     ==>          nextState = S4;
-27                            S5:
-28         0/1     ==>          nextState = S5;
-29                          endcase
-30                      
-31                        
-32                        // output generation
-33                        always_comb begin
-34         1/1              if (currState == S0) begin
-35         0/1     ==>        cMove = 4'h5;
-36         0/1     ==>        win = 0;
-37                          end
-                        MISSING_ELSE
-38         1/1              if (currState == S1) begin
-39         0/1     ==>        cMove = 4'h1;
-40         0/1     ==>        win = 0;
-41                          end
-                        MISSING_ELSE
-42         1/1              if (currState == S2) begin
-43         0/1     ==>        cMove = 4'h9;
-44         0/1     ==>        win = 1;
-45                          end
-                        MISSING_ELSE
-46         1/1              if (currState == S3) begin
-47         0/1     ==>        cMove = 4'h3;
-48         0/1     ==>        win = 0;
-49                          end
-                        MISSING_ELSE
-50         1/1              if (currState == S4) begin
-51         0/1     ==>        cMove = 4'h2;
-52         0/1     ==>        win = 1;
-53                          end
-                        MISSING_ELSE
-54         1/1              if (currState == S5) begin
-55         0/1     ==>        cMove = 4'h7;
-56         0/1     ==>        win = 1;
-57                          end
-                        MISSING_ELSE
-58                        end
-59                      
-60                        // register
-61                        always_ff @(posedge clock)
-62         0/1     ==>      if (reset)
-63         0/1     ==>        currState <= S0;
-64                          else
-65         0/1     ==>        currState <= nextState;
-
+State, Transition and Sequence Details for FSM :: currState
 -------------------------------------------------------------------------------
-===============================================================================
-Module Instance : myAbstractFSM
-===============================================================================
+states Line No. Covered 
+S0     63       Covered 
+S1     18       Covered 
+S2     20       Covered 
+S3     20       Covered 
+S4     24       Covered 
+S5     24       Covered 
+
+transitions Line No. Covered     
+S0->S1      18       Covered     
+S1->S0      63       Not Covered 
+S1->S2      20       Covered     
+S1->S3      20       Covered     
+S2->S0      63       Covered     
+S3->S0      63       Not Covered 
+S3->S4      24       Covered     
+S3->S5      24       Covered     
+S4->S0      63       Covered     
+S5->S0      63       Covered     
 
-Instance :
-
-SCORE  LINE   
- 25.00  25.00 
-
-
-Instance's subtree :
-
-SCORE  LINE   
- 25.00  25.00 
-
-
-Module : 
-
-SCORE  LINE   NAME          
- 25.00  25.00 myAbstractFSM 
-
-
-Parent : 
-
-none
-----------------
-
-
-Subtrees :
-
-
-no children
-----------------
-
-
--------------------------------------------------------------------------------
-Since this is the module's only instance, the coverage report is the same as for the module.
-===============================================================================
-Module : dFlipFlop
-===============================================================================
-SCORE  LINE   
-100.00 100.00 
-
-Source File(s) : 
-
-/afs/andrew.cmu.edu/usr24/xinyew/private/18240/18240_lab_3/01_struc.sv
-
-Module self-instances :
-
-SCORE  LINE   NAME               
-100.00 100.00 testBench.dut1.ff0 
-100.00 100.00 testBench.dut1.ff1 
-100.00 100.00 testBench.dut1.ff2 
-
-
-
--------------------------------------------------------------------------------
-Line Coverage for Module : dFlipFlop
-
-             Line No.   Total   Covered  Percent
-TOTAL                        3        3   100.00
-ALWAYS              8        3        3   100.00
-
-7                         always_ff @(posedge clock)
-8          1/1              if (reset == 1'b1)
-9          1/1                q <= 0;
-10                          else
-11         1/1                q <= d;
-
--------------------------------------------------------------------------------
-===============================================================================
-Module Instance : testBench.dut1.ff0
-===============================================================================
-
-Instance :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Instance's subtree :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Module : 
-
-SCORE  LINE   NAME      
-100.00 100.00 dFlipFlop 
-
-
-Parent : 
-
-SCORE  LINE   NAME 
-100.00 100.00 dut1 
-
-
-Subtrees :
-
-
-no children
-----------------
-
-
--------------------------------------------------------------------------------
-Line Coverage for Instance : testBench.dut1.ff0
-
-             Line No.   Total   Covered  Percent
-TOTAL                        3        3   100.00
-ALWAYS              8        3        3   100.00
-
-7                         always_ff @(posedge clock)
-8          1/1              if (reset == 1'b1)
-9          1/1                q <= 0;
-10                          else
-11         1/1                q <= d;
-
--------------------------------------------------------------------------------
-===============================================================================
-Module Instance : testBench.dut1.ff1
-===============================================================================
-
-Instance :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Instance's subtree :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Module : 
-
-SCORE  LINE   NAME      
-100.00 100.00 dFlipFlop 
-
-
-Parent : 
-
-SCORE  LINE   NAME 
-100.00 100.00 dut1 
-
-
-Subtrees :
-
-
-no children
-----------------
-
-
--------------------------------------------------------------------------------
-Line Coverage for Instance : testBench.dut1.ff1
-
-             Line No.   Total   Covered  Percent
-TOTAL                        3        3   100.00
-ALWAYS              8        3        3   100.00
-
-7                         always_ff @(posedge clock)
-8          1/1              if (reset == 1'b1)
-9          1/1                q <= 0;
-10                          else
-11         1/1                q <= d;
-
--------------------------------------------------------------------------------
-===============================================================================
-Module Instance : testBench.dut1.ff2
-===============================================================================
-
-Instance :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Instance's subtree :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Module : 
-
-SCORE  LINE   NAME      
-100.00 100.00 dFlipFlop 
-
-
-Parent : 
-
-SCORE  LINE   NAME 
-100.00 100.00 dut1 
-
-
-Subtrees :
-
-
-no children
-----------------
-
-
--------------------------------------------------------------------------------
-Line Coverage for Instance : testBench.dut1.ff2
-
-             Line No.   Total   Covered  Percent
-TOTAL                        3        3   100.00
-ALWAYS              8        3        3   100.00
-
-7                         always_ff @(posedge clock)
-8          1/1              if (reset == 1'b1)
-9          1/1                q <= 0;
-10                          else
-11         1/1                q <= d;
-
-===============================================================================
-Module : myFSM_test
-===============================================================================
-SCORE  LINE   
-100.00 100.00 
-
-Source File(s) : 
-
-/afs/andrew.cmu.edu/usr24/xinyew/private/18240/18240_lab_3/tb.sv
-
-Module self-instances :
-
-SCORE  LINE   NAME           
-100.00 100.00 testBench.dut2 
-
-
-
--------------------------------------------------------------------------------
-Line Coverage for Module : myFSM_test
-
-             Line No.   Total   Covered  Percent
-TOTAL                      100      100   100.00
-INITIAL            36        4        4   100.00
-INITIAL            41       96       96   100.00
-
-35                          initial begin
-36         1/1                  clock = 0;
-37         3/3                  forever #5 clock = ~clock;
-38                          end
-39                      
-40                          initial begin
-41         1/1                  $monitor($time,, "state=%b, cMove=%d, hMove=%d, win=%b",
-42                                       {q2, q1, q0}, cMove, hMove, win);
-43                              // initialize values
-44         1/1                  hMove <= 4'hF; 
-45         1/1                  reset <= 1'b1;
-46                      
-47                              // reset the FSM
-48         2/2                  @(posedge clock); // wait for a positive clock edge
-49         2/2                  @(posedge clock); // one edge is enough, but what the heck
-50         2/2                  @(posedge clock);
-51                      
-52         2/2                  @(posedge clock); // begin cycle 0
-53         1/1                  reset <= 1'b0; // release the reset
-54                      
-55                      
-56                              // start an example sequence -- not meaningful for the lab
-57         1/1                  hMove <= 4'h6; // these changes are after the clock edge
-58                                              // which means the state change happens
-59                                              // AFTER the next clock edge
-60         2/2                  @(posedge clock); // begin cycle 1
-61         1/1                  hMove <= 4'h1;
-62                      
-63                              
-64                              // reset the FSM
-65         2/2                  @(posedge clock); 
-66         2/2                  @(posedge clock); 
-67         2/2                  @(posedge clock);
-68                      
-69         1/1                  reset <= 1'b1;
-70         2/2                  @(posedge clock); 
-71         1/1                  reset <= 1'b0; 
-72                              //start
-73         1/1                  hMove <= 4'h6; 
-74         2/2                  @(posedge clock); // 2-7 TEST
-75         1/1                  hMove <= 4'h9;
-76         2/2                  @(posedge clock); 
-77         1/1                  hMove <= 4'h2;
-78                      
-79                      
-80                              // reset the FSM
-81         2/2                  @(posedge clock); 
-82         2/2                  @(posedge clock); 
-83         2/2                  @(posedge clock);
-84                      
-85         1/1                  reset <= 1'b1;
-86         2/2                  @(posedge clock); 
-87         1/1                  reset <= 1'b0;  
-88                              //start
-89         1/1                  hMove <= 4'h6; 
-90         2/2                  @(posedge clock); // 7-2 TEST
-91         1/1                  hMove <= 4'h9;
-92         2/2                  @(posedge clock); 
-93         1/1                  hMove <= 4'h7;
-94                      
-95                      
-96                              // reset the FSM
-97         2/2                  @(posedge clock); 
-98         2/2                  @(posedge clock); 
-99         2/2                  @(posedge clock);
-100                     
-101        1/1                  reset <= 1'b1;
-102        2/2                  @(posedge clock); 
-103        1/1                  reset <= 1'b0;  
-104                             //start
-105        1/1                  hMove <= 4'h6; 
-106        2/2                  @(posedge clock); // not 9 test
-107        1/1                  hMove <= 4'h5;
-108                     
-109                     
-110                             // reset the FSM
-111        2/2                  @(posedge clock); 
-112        2/2                  @(posedge clock); 
-113        2/2                  @(posedge clock);
-114                     
-115        1/1                  reset <= 1'b1;
-116        2/2                  @(posedge clock); 
-117        1/1                  reset <= 1'b0;  
-118                             //start
-119        1/1                  hMove <= 4'h6; 
-120        2/2                  @(posedge clock); // not 7-2 test
-121        1/1                  hMove <= 4'h9;
-122        2/2                  @(posedge clock); 
-123        1/1                  hMove <= 4'h4; 
-124                     
-125                     
-126                             // reset the FSM
-127        2/2                  @(posedge clock); 
-128        2/2                  @(posedge clock); 
-129        2/2                  @(posedge clock);
-130                     
-131        1/1                  reset <= 1'b1;
-132        2/2                  @(posedge clock); 
-133        1/1                  reset <= 1'b0; 
-134                             //start
-135        1/1                  hMove <= 4'h4;  // not 6 test
-136        2/2                  @(posedge clock); // not 
-137                     
-138                     
-139        2/2                  #1 $finish;
-
--------------------------------------------------------------------------------
-===============================================================================
-Module Instance : testBench.dut2
-===============================================================================
-
-Instance :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Instance's subtree :
-
-SCORE  LINE   
-100.00 100.00 
-
-
-Module : 
-
-SCORE  LINE   NAME       
-100.00 100.00 myFSM_test 
-
-
-Parent : 
-
-SCORE  LINE   NAME      
---     --     testBench 
-
-
-Subtrees :
-
-
-no children
-----------------
-
-
--------------------------------------------------------------------------------
-Since this is the module's only instance, the coverage report is the same as for the module.
-===============================================================================
-Module : myExplicitFSM
-===============================================================================
-SCORE  LINE   
-100.00 100.00 
-
-Source File(s) : 
-
-/afs/andrew.cmu.edu/usr24/xinyew/private/18240/18240_lab_3/01_struc.sv
-
-Module self-instances :
-
-SCORE  LINE   NAME           
-100.00 100.00 testBench.dut1 
-
-
-
--------------------------------------------------------------------------------
-Line Coverage for Module : myExplicitFSM
-
-             Line No.   Total   Covered  Percent
-TOTAL                        8        8   100.00
-CONT_ASSIGN        50        1        1   100.00
-CONT_ASSIGN        75        1        1   100.00
-CONT_ASSIGN        98        1        1   100.00
-CONT_ASSIGN       123        1        1   100.00
-CONT_ASSIGN       125        1        1   100.00
-CONT_ASSIGN       128        1        1   100.00
-CONT_ASSIGN       132        1        1   100.00
-CONT_ASSIGN       138        1        1   100.00
-
-49                        // next state generation
-50         1/1            assign d2 = ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) | 
-51                                    ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-52                                    ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-53                                    ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-54                      
-55                                    (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-56                                    (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-57                                    (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-58                                    (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-59                                    (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-60                                    (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-61                                    (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-62                                    (q2 & (~q1) & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-63                                    (q2 & (~q1) & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-64                      
-65                                    (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-66                                    (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-67                                    (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-68                                    (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-69                                    (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-70                                    (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-71                                    (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-72                                    (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-73                                    (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]);
-74                      
-75         1/1            assign d1 = ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-76                                    ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-77                                    ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-78                                    ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-79                                    ((~q2) & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-80                                    ((~q2) & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-81                      
-82                                    ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-83                                    ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-84                                    ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-85                                    ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-86                                    ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-87                                    ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-88                                    ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-89                                    ((~q2) & q1 & (~q0) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-90                                    ((~q2) & q1 & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-91                      
-92                                    ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-93                                    ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-94                                    ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-95                                    ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-96                                    ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]);
-97                      
-98         1/1            assign d0 = ((~q2) & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-99                      
-100                                   ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-101                                   ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-102                                   ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-103                                   ((~q2) & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-104                     
-105                                   ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-106                                   ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-107                                   ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-108                                   ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-109                                   ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-110                                   ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-111                     
-112                                   (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-113                                   (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-114                                   (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-115                                   (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-116                                   (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-117                                   (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-118                                   (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-119                                   (q2 & (~q1) & q0 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-120                                   (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]);
-121                     
-122                       // output logic generation
-123        1/1            assign cMove[3] = (~d2) & d1 & (~d0);
-124                     
-125        1/1            assign cMove[2] = ((~d2) & (~d1) & (~d0)) |
-126                                         (d2 & (~d1) & d0);
-127                     
-128        1/1            assign cMove[1] = ((~d2) & d1 & d0) |
-129                                         (d2 & (~d1) & (~d0)) |
-130                                         (d2 & (~d1) & d0);
-131                     
-132        1/1            assign cMove[0] = ((~d2) & (~d1) & (~d0)) |
-133                                         ((~d2) & (~d1) & d0) |
-134                                         ((~d2) & d1 & (~d0)) |
-135                                         ((~d2) & d1 & d0) |
-136                                         (d2 & (~d1) & d0);
-137                      
-138        1/1            assign win = ((~d2) & d1 & (~d0)) |
 
 -------------------------------------------------------------------------------
 ===============================================================================
@@ -873,35 +53,33 @@ Module Instance : testBench.dut1
 
 Instance :
 
-SCORE  LINE   
-100.00 100.00 
+SCORE  FSM    
+ 80.00  80.00 
 
 
 Instance's subtree :
 
-SCORE  LINE   
-100.00 100.00 
+SCORE  FSM    
+ 80.00  80.00 
 
 
 Module : 
 
-SCORE  LINE   NAME          
-100.00 100.00 myExplicitFSM 
+SCORE  FSM    NAME          
+ 80.00  80.00 myAbstractFSM 
 
 
 Parent : 
 
-SCORE  LINE   NAME      
+SCORE  FSM    NAME      
 --     --     testBench 
 
 
 Subtrees :
 
-SCORE  LINE   NAME 
-100.00 100.00 ff0  
-100.00 100.00 ff1  
-100.00 100.00 ff2  
 
+no children
+----------------
 
 
 -------------------------------------------------------------------------------
@@ -909,7 +87,7 @@ Since this is the module's only instance, the coverage report is the same as for
 ===============================================================================
 Module : testBench
 ===============================================================================
-SCORE  LINE   
+SCORE  FSM    
 --     --     
 
 Source File(s) : 
@@ -918,7 +96,7 @@ Source File(s) :
 
 Module self-instances :
 
-SCORE  LINE   NAME      
+SCORE  FSM    NAME      
 --     --     testBench 
 
 
@@ -930,19 +108,19 @@ Module Instance : testBench
 
 Instance :
 
-SCORE  LINE   
+SCORE  FSM    
 --     --     
 
 
 Instance's subtree :
 
-SCORE  LINE   
-100.00 100.00 
+SCORE  FSM    
+ 80.00  80.00 
 
 
 Module : 
 
-SCORE  LINE   NAME      
+SCORE  FSM    NAME      
 --     --     testBench 
 
 
@@ -954,9 +132,8 @@ none
 
 Subtrees :
 
-SCORE  LINE   NAME 
-100.00 100.00 dut1 
-100.00 100.00 dut2 
+SCORE  FSM    NAME 
+ 80.00  80.00 dut1 
 
 
 

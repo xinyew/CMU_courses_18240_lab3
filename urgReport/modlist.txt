@@ -1,17 +1,13 @@
 Design Module List
 
 Total Module Definition Coverage Summary 
-SCORE  LINE   
- 46.25  46.25 
+SCORE  FSM    
+ 80.00  80.00 
 
 
-Total modules in report: 6
+Total modules in report: 2
 -------------------------------------------------------------------------------
-SCORE  LINE   NAME                
- 14.29  14.29 SevenSegmentDisplay 
- 25.00  25.00 myAbstractFSM       
-100.00 100.00 dFlipFlop           
-100.00 100.00 myFSM_test          
-100.00 100.00 myExplicitFSM       
---     --     testBench           
+SCORE  FSM    NAME          
+ 80.00  80.00 myAbstractFSM 
+--     --     testBench     
 
