@@ -22,7 +22,7 @@
 -picarchive
 -sverilog
 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/bin/vcs1
-01_struc.sv
+02_abstract.sv
 67
 XMODIFIERS=@im=ibus
 XDG_VTNR=5
@@ -94,11 +94,11 @@ AKLOG=/usr/bin/aklog
 0
 0
 1
-1677634376 01_struc.sv
+1677636338 02_abstract.sv
 4
 1654054205 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvirsim.so
 1654053585 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/liberrorinf.so
 1654053489 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvfs.so
-1677634421 simv.daidir
+1677636341 simv.daidir
 -1 partitionlib

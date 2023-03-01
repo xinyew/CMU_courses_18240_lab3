@@ -5,11 +5,11 @@
         "module",
         1
     ],
-    "myExplicitFSM": [
-        "myExplicitFSM",
-        "Mt37a",
+    "myAbstractFSM": [
+        "myAbstractFSM",
+        "p6HLE",
         "module",
-        2
+        4
     ],
     "...MASTER...": [
         "SIM",
