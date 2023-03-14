@@ -3,7 +3,7 @@
 module testBench();
     logic w1, w2, w3, w4, w5, w6;
     logic [3:0] w7, w8;
-    myAbstractFSM dut1(.clock(w1),
+    myExplicitFSM dut1(.clock(w1),
                        .reset(w2),
                        .q1(w3),
                        .q2(w4),
