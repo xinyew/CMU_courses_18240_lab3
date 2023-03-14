@@ -3,7 +3,6 @@
 module myAbstractFSM (
   output logic [3:0] cMove,
   output logic       win,
-  output logic       q2, q1, q0,
   input  logic [3:0] hMove,
   input  logic       clock, reset);
 
