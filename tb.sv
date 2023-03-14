@@ -5,17 +5,11 @@ module testBench();
     logic [3:0] w7, w8;
     myAbstractFSM dut1(.clock(w1),
                        .reset(w2),
-                       .q1(w3),
-                       .q2(w4),
-                       .q0(w5),
                        .win(w6),
                        .cMove(w7),
                        .hMove(w8));
     myFSM_test dut2(.clock(w1),
                        .reset(w2),
-                       .q1(w3),
-                       .q2(w4),
-                       .q0(w5),
                        .win(w6),
                        .cMove(w7),
                        .hMove(w8));
@@ -26,7 +20,6 @@ endmodule : testBench
 module myFSM_test(
     input logic [3:0] cMove,
     input logic win,
-    input logic q2, q1, q0,
     output logic [3:0] hMove,
     output logic clock, reset);
 

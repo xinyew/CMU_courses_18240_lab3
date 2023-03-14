@@ -21,7 +21,7 @@ module myAbstractFSM (
 		    nextState = S1;
 		  else
           nextState = (hMove == 4'h9) ? S3 : S2;
-		end	 
+      end	 
       S2:
         nextState = S2;
       S3: begin
@@ -29,7 +29,7 @@ module myAbstractFSM (
 		    nextState = S3;
 		  else
           nextState = (hMove == 4'h2) ? S5 : S4;
-		end
+      end
       S4:
         nextState = S4;
       S5:
