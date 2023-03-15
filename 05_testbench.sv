@@ -22,6 +22,7 @@ module testbench();
 
   initial begin
     // C_5
+    @(posedge clock);
     hMove <= 4'd4;
     enter_L <= 1'd0;
     @(posedge clock) // #10 C_5_I
