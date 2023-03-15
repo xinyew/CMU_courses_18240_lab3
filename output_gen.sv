@@ -242,25 +242,25 @@ always_comb begin
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_4_6_9_W) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_4_6_9_W) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd3;
-      c1 = 4'd5;
-      c0 = 4'd7;
+      c2 = 4'd2;
+      c1 = 4'd3;
+      c0 = 4'd5;
       h3 = 4'd4;
       h2 = 4'd6;
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_4_6_9_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_4_6_9_W_N) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd3;
-      c1 = 4'd5;
-      c0 = 4'd7;
+      c2 = 4'd2;
+      c1 = 4'd3;
+      c0 = 4'd5;
       h3 = 4'd4;
       h2 = 4'd6;
       h1 = 4'd9;
@@ -278,7 +278,7 @@ always_comb begin
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_6_7_9_W_N) begin
+    if (currState == C_1_2_3_5_H_6_7_9_W_N) begin
       cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
@@ -291,8 +291,8 @@ always_comb begin
       
     end
 
-    if (currState == C_1_3_5_H_6_8_9_W) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_6_8_9_W) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd2;
@@ -303,8 +303,8 @@ always_comb begin
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_6_8_9_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_6_8_9_W_N) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd2;
