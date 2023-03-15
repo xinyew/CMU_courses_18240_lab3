@@ -18,17 +18,17 @@
 -Mxcflags= -pipe -fPIC -I/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/include
 -Mxllcflags=
 -gen_obj
--nc
 -picarchive
 -sverilog
 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/bin/vcs1
-theBigGame1.sv
+05_testbench.sv
+05_theBigGame.sv
 57
 no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
 https_proxy=http://proximus.ece.cmu.edu:3128/
 http_proxy=http://proximus.ece.cmu.edu:3128/
 ftp_proxy=http://proximus.ece.cmu.edu:3128/
-XDG_SESSION_ID=1500
+XDG_SESSION_ID=1696
 XDG_RUNTIME_DIR=/run/user/2673167
 XDG_DATA_DIRS=/afs/andrew.cmu.edu/usr24/xinyew/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=32
@@ -47,9 +47,9 @@ UNAME=/bin/uname
 TOOL_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64
 SYN_DIR=/syn/T-2022.03-SP2
 SYNOPSYS_HOME=/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation
-SSH_TTY=/dev/pts/25
-SSH_CONNECTION=128.2.13.152 45838 172.19.138.18 22
-SSH_CLIENT=128.2.13.152 45838 22
+SSH_TTY=/dev/pts/22
+SSH_CONNECTION=128.2.13.188 38740 172.19.138.18 22
+SSH_CLIENT=128.2.13.188 38740 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SNPS_VCS_CLANG_PATH=/afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
@@ -83,12 +83,13 @@ BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
 0
-1
-1678848091 theBigGame1.sv
+2
+1678906949 05_theBigGame.sv
+1678917287 05_testbench.sv
 4
 1654054205 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvirsim.so
 1654053585 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/liberrorinf.so
 1654053489 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libsnpsmalloc.so
 1654053565 /afs/ece.cmu.edu/support/synopsys/synopsys.release/T-Foundation/vcs/T-2022.06/linux64/lib/libvfs.so
-1678848095 simv.daidir
+1678917288 simv.daidir
 -1 partitionlib
