@@ -59,8 +59,173 @@ module testbench();
     @(posedge clock); // #350 C_1_3_5_H_2_6_9_E
     enter_L <= 1'd1;
     @(posedge clock); // #370 C_1_3_5_7_H_2_6_9_W
-    
-
+    @(posedge clock); // #390 C_1_3_5_7_H_2_6_9_W
+    newGame_L <= 1'd0;
+    @(posedge clock); // #410 C_1_3_5_7_H_2_6_9_W_N
+    @(posedge clock); // #430 C_1_3_5_7_H_2_6_9_W_N
+    newGame_L <= 1'd1;
+    @(posedge clock); // #450 C_5
+    hMove <= 4'd6;
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+     enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6   
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
     #1 $finish;
   end
 endmodule : testbench
