@@ -174,8 +174,8 @@ module task5 (
   end
 
   
-  // output generation
- always_comb begin
+
+always_comb begin
 	 cMove = 4'b0000;
 	 win = 1'b1;
      {c3, c2, c1, c0, h3, h2, h1, h0} = 32'b0;
@@ -419,31 +419,31 @@ module task5 (
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_4_6_9_W) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_4_6_9_W) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd3;
-      c1 = 4'd5;
-      c0 = 4'd7;
+      c2 = 4'd2;
+      c1 = 4'd3;
+      c0 = 4'd5;
       h3 = 4'd4;
       h2 = 4'd6;
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_4_6_9_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_4_6_9_W_N) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd3;
-      c1 = 4'd5;
-      c0 = 4'd7;
+      c2 = 4'd2;
+      c1 = 4'd3;
+      c0 = 4'd5;
       h3 = 4'd4;
       h2 = 4'd6;
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_6_7_9_W) begin
+    if (currState == C_1_2_3_5_H_6_7_9_W) begin 
       cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
@@ -455,7 +455,7 @@ module task5 (
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_6_7_9_W_N) begin
+    if (currState == C_1_2_3_5_H_6_7_9_W_N) begin
       cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
@@ -468,8 +468,8 @@ module task5 (
       
     end
 
-    if (currState == C_1_3_5_H_6_8_9_W) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_6_8_9_W) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd2;
@@ -480,8 +480,8 @@ module task5 (
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_6_8_9_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_2_3_5_H_6_8_9_W_N) begin
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd2;
@@ -493,7 +493,7 @@ module task5 (
 
     end
 
-    if (currState == C_1_3_5_H_2_6_9_W) begin
+    if (currState == C_1_3_5_7_H_2_6_9_W) begin
       cMove = 4'h7;
       win = 1;
       c3 = 4'd1;
@@ -505,7 +505,7 @@ module task5 (
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_2_6_9_W_N) begin
+    if (currState == C_1_3_5_7_H_2_6_9_W_N) begin
       cMove = 4'h7;
       win = 1;
       c3 = 4'd1;
