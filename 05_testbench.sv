@@ -36,6 +36,17 @@ module testbench();
     enter_L <= 1'd1;
     @(posedge clock) // #130 C_1_5_H_6
 
+    enter_L <= 1'd0;
+    @(posedge clock) // #150 C_1_5_H_6_I
+    enter_L <= 1'd1;
+    @(posedge clock) // #170 C_1_5_H_6
+
+    hMove <= 4'd9;
+    @(posedge clock); // #190 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #210 C_1_5_H_6_9_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #230 C_1_3_5_H_6_9
     #1 $finish;
   end
 endmodule : testbench
