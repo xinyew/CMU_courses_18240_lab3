@@ -205,12 +205,12 @@ module task5 (
           nextState = C_5_I;
       C_1_5_H_6_I:
         if (enter_L)
-          nextState = C_5;
+          nextState = C_1_5_H_6;
         else
           nextState = C_1_5_H_6_I;
       C_1_3_5_H_6_9_I:
         if (enter_L)
-          nextState = C_5;
+          nextState = C_1_3_5_H_6_9;
         else
           nextState = C_1_3_5_H_6_9_I;
 
