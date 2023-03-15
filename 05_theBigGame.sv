@@ -608,7 +608,7 @@ always_comb begin
   end
 
     // register
-  always_ff @(posedge clock)
+  always_ff @(posedge clock, posedge reset)
     if (reset)
       currState <= C_5;
     else
