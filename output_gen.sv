@@ -1,9 +1,8 @@
-
 always_comb begin
 	 cMove = 4'b0000;
 	 win = 1'b1;
      {c3, c2, c1, c0, h3, h2, h1, h0} = 32'b0;
-  if (currState == C_5) begin
+    if (currState == C_5) begin
       cMove = 4'h5;
       win = 0;
       c3 = 4'd5;
@@ -82,27 +81,27 @@ always_comb begin
     end
 
 
-    if (currState == C_1_5_H_2_6_W) begin
+    if (currState == C_1_5_9_H_2_6_W) begin
       cMove = 4'h7;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd5;
-      c1 = 4'd7;
+      c1 = 4'd9;
       h3 = 4'd2;
       h2 = 4'd6;
     end
-    if (currState == C_1_5_H_2_6_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_5_9_H_2_6_W_N) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd5;
-      c1 = 4'd7;
+      c1 = 4'd9;
       h3 = 4'd2;
       h2 = 4'd6;
     end
 
-    if (currState == C_1_5_H_3_6_W) begin
-      cMove = 4'h7;
+    if (currState == C_1_5_9_H_3_6_W) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd5;
@@ -110,71 +109,71 @@ always_comb begin
       h3 = 4'd3;
       h2 = 4'd6;
     end
-    if (currState == C_1_5_H_3_6_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_5_9_H_3_6_W_N) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd5;
-      c1 = 4'd7;
+      c1 = 4'd9;
       h3 = 4'd3;
       h2 = 4'd6;
     end
 
-    if (currState == C_1_5_H_4_6_W) begin
-      cMove = 4'h7;
+    if (currState == C_1_5_9_H_4_6_W) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd5;
-      c1 = 4'd7;
+      c1 = 4'd9;
       h3 = 4'd4;
       h2 = 4'd6;
     end
-    if (currState == C_1_5_H_4_6_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_5_9_H_4_6_W_N) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd5;
-      c1 = 4'd7;
+      c1 = 4'd9;
       h3 = 4'd4;
       h2 = 4'd6;
     end
 
-    if (currState == C_1_5_H_6_7_W) begin
-      cMove = 4'h2;
+    if (currState == C_1_5_9_H_6_7_W) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd2;
-      c1 = 4'd5;
+      c2 = 4'd5;
+      c1 = 4'd9;
       h3 = 4'd6;
       h2 = 4'd7;
     end
-    if (currState == C_1_5_H_6_7_W_N) begin
-      cMove = 4'h2;
+    if (currState == C_1_5_9_H_6_7_W_N) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd2;
-      c1 = 4'd5;
+      c2 = 4'd5;
+      c1 = 4'd9;
       h3 = 4'd6;
       h2 = 4'd7;
     end
 
 
 
-    if (currState == C_1_5_H_6_8_W) begin
-      cMove = 4'h7;
+    if (currState == C_1_5_9_H_6_8_W) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd2;
-      c1 = 4'd5;
+      c2 = 4'd5;
+      c1 = 4'd9;
       h3 = 4'd6;
       h2 = 4'd8;
     end
-    if (currState == C_1_5_H_6_8_W_N) begin
-      cMove = 4'h7;
+    if (currState == C_1_5_9_H_6_8_W_N) begin
+      cMove = 4'h9;
       win = 1;
       c3 = 4'd1;
-      c2 = 4'd2;
-      c1 = 4'd5;
+      c2 = 4'd5;
+      c1 = 4'd9;
       h3 = 4'd6;
       h2 = 4'd8;
     end
