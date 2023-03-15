@@ -51,6 +51,12 @@ module task5 (
                     C_1_3_5_7_H_2_6_9_W = 6'd33,
                     C_1_3_5_7_H_2_6_9_W_N = 6'd34
                    } currState, nextState;
+   // register
+  always_ff @(posedge clock, posedge reset)
+    if (reset)
+      currState <= C_5;
+    else
+      currState <= nextState;
 
   // next state generation
   always_comb begin
@@ -62,6 +68,8 @@ module task5 (
           else
             nextState = C_5_H_6_E;
         end
+        else
+          nextState = C_5;    	
       end
       C_1_5_H_6: begin
         if (enter)
@@ -76,6 +84,8 @@ module task5 (
             4'd8: nextState = C_1_5_H_6_8_E;
             4'd9: nextState = C_1_5_H_6_9_E;
           endcase
+        else
+          nextState = C_1_5_H_6;
       end
       C_1_3_5_H_6_9:
         if (enter)
@@ -90,86 +100,173 @@ module task5 (
             4'd7: nextState = C_1_3_5_H_6_7_9_E;
             4'd8: nextState = C_1_3_5_H_6_8_9_E;
           endcase
-
+        else
+          nextState = C_1_3_5_H_6_9;
       C_5_H_6_E:
         if (~enter)
           nextState = C_1_5_H_6;
+        else
+          nextState = C_5_H_6_E;
       C_1_5_H_2_6_E:
         if (~enter)
           nextState = C_1_5_9_H_2_6_W;
+        else
+          nextState = C_1_5_H_2_6_E;
       C_1_5_H_3_6_E:
         if (~enter)
           nextState = C_1_5_9_H_3_6_W;
+        else
+          nextState = C_1_5_H_3_6_E;
       C_1_5_H_4_6_E:
         if (~enter)
           nextState = C_1_5_9_H_4_6_W;
+        else
+          nextState = C_1_5_H_4_6_E;
       C_1_5_H_6_7_E:
         if (~enter)
           nextState = C_1_5_9_H_6_7_W;
+        else
+          nextState = C_1_5_H_6_7_E;
       C_1_5_H_6_8_E:
         if (~enter)
           nextState = C_1_5_9_H_6_8_W;
+        else
+          nextState = C_1_5_H_6_8_E;
       C_1_5_H_6_9_E:
         if (~enter)
           nextState = C_1_3_5_H_6_9;
+        else
+          nextState = C_1_5_H_6_9_E;
       C_1_3_5_H_2_6_9_E:
         if (~enter)
           nextState = C_1_3_5_7_H_2_6_9_W;
+        else
+          nextState = C_1_3_5_H_2_6_9_E;
       C_1_3_5_H_4_6_9_E:
         if (~enter)
           nextState = C_1_2_3_5_H_4_6_9_W;
+        else
+          nextState = C_1_3_5_H_4_6_9_E;
       C_1_3_5_H_6_7_9_E:
         if (~enter)
           nextState = C_1_2_3_5_H_6_7_9_W;
+        else
+          nextState = C_1_3_5_H_6_7_9_E;
       C_1_3_5_H_6_8_9_E:
         if (~enter)
           nextState = C_1_2_3_5_H_6_8_9_W;
+        else
+          nextState = C_1_3_5_H_6_8_9_E;
 
       C_1_5_9_H_2_6_W:
         if (newGame)
           nextState = C_1_5_9_H_2_6_W_N;
+        else
+          nextState = C_1_5_9_H_2_6_W;
       C_1_5_9_H_3_6_W:
         if (newGame)
           nextState = C_1_5_9_H_3_6_W_N;
+        else
+          nextState = C_1_5_9_H_3_6_W;
       C_1_5_9_H_4_6_W:
         if (newGame)
           nextState = C_1_5_9_H_4_6_W_N;
+        else
+          nextState = C_1_5_9_H_4_6_W;
       C_1_5_9_H_6_7_W:
         if (newGame)
           nextState = C_1_5_9_H_6_7_W_N;
+        else
+          nextState = C_1_5_9_H_6_7_W;
       C_1_5_9_H_6_8_W:
         if (newGame)
           nextState = C_1_5_9_H_6_8_W_N;
+        else
+          nextState = C_1_5_9_H_6_8_W;
       C_1_3_5_7_H_2_6_9_W:
         if (newGame)
           nextState = C_1_3_5_7_H_2_6_9_W_N;
+        else
+          nextState = C_1_3_5_7_H_2_6_9_W;
       C_1_2_3_5_H_4_6_9_W:
         if (newGame)
           nextState = C_1_2_3_5_H_4_6_9_W_N;
+        else
+          nextState = C_1_2_3_5_H_4_6_9_W;
       C_1_2_3_5_H_6_7_9_W:
         if (newGame)
           nextState = C_1_2_3_5_H_6_7_9_W_N;
+        else
+          nextState = C_1_2_3_5_H_6_7_9_W;
       C_1_2_3_5_H_6_8_9_W:
         if (newGame)
           nextState = C_1_2_3_5_H_6_8_9_W_N;
+        else
+          nextState = C_1_2_3_5_H_6_8_9_W;
 
-      C_5_I,
-      C_1_5_H_6_I,
+      C_5_I:
+        if (~enter)
+          nextState = C_5;
+        else
+          nextState = C_5_I;
+      C_1_5_H_6_I:
+        if (~enter)
+          nextState = C_5;
+        else
+          nextState = C_1_5_H_6_I;
       C_1_3_5_H_6_9_I:
         if (~enter)
           nextState = C_5;
+        else
+          nextState = C_1_3_5_H_6_9_I;
 
-      C_1_5_9_H_2_6_W_N,
-      C_1_5_9_H_3_6_W_N,
-      C_1_5_9_H_4_6_W_N,
-      C_1_5_9_H_6_7_W_N,
-      C_1_5_9_H_6_8_W_N,
-      C_1_2_3_5_H_4_6_9_W_N,
-      C_1_2_3_5_H_6_7_9_W_N,
-      C_1_2_3_5_H_6_8_9_W_N,
+      C_1_5_9_H_2_6_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_2_6_W_N;
+      C_1_5_9_H_3_6_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_3_6_W_N;
+      C_1_5_9_H_4_6_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_4_6_W_N;
+      C_1_5_9_H_6_7_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_6_7_W_N;
+      C_1_5_9_H_6_8_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_6_8_W_N;
+      C_1_2_3_5_H_4_6_9_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_2_3_5_H_4_6_9_W_N;
+      C_1_2_3_5_H_6_7_9_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_2_3_5_H_6_7_9_W_N;
+      C_1_2_3_5_H_6_8_9_W_N:
+        if (~newGame)
+          nextState = C_5;
+		  else
+		    nextState = C_1_2_3_5_H_6_8_9_W_N;
       C_1_3_5_7_H_2_6_9_W_N:
         if (~newGame)
           nextState = C_5;
+        else
+          nextState = C_1_3_5_7_H_2_6_9_W_N;
+
+      default: nextState = C_5;
     endcase
   end
 
@@ -413,7 +510,7 @@ always_comb begin
       win = 0;
       c3 = 4'd1;
       c2 = 4'd3;
-      c1 = 4'd5;
+      c1 = 4'd5;			
       h3 = 4'd6;
       h2 = 4'd8;
       h1 = 4'd9;
@@ -518,12 +615,169 @@ always_comb begin
     end
   end
 
-    // register
-  always_ff @(posedge clock)
-    if (reset)
-      currState <= C_5;
-    else
-      currState <= nextState;
-
 endmodule: task5
 
+
+module task5_test ();
+  logic [3:0] cMove;
+  logic       win;
+  logic [3:0] h3, h2, h1, h0, c3, c2, c1, c0;
+  logic [3:0] hMove;
+  logic       clock, reset, enter, newGame;
+
+  // C_1_2_H_3_4_E_I means that
+  // computer's move: 1, 2
+  // human move: 3, 4
+  // enter pressed
+  // this is an invalid move
+  // 'W' means that computer wins
+  // 'N' means that newGame pressed
+    task5 dut(.*);
+
+    initial begin
+        $monitor ($stime,, "h3:%d, h2:%d, h1:%d, h0:%d, c3:%d, c2:%d, c1:%d, c0:%d, hMove: %d cMove: %d newGame: %b reset: %b enter: %b, win:%b, state: %s, nextState: %s", h3, h2, h1, h0, c3, c2, c1, c0, hMove, cMove, newGame, reset, enter, win, dut.currState.name, dut.nextState.name, );
+        // $monitor ($stime,, "state:%s, nextstate:%s,{c3:%d, c2:%d, c1:%d, h0:%d,
+        //  h3:%d, h2:%d, h1:%d, h0:%d}, cMove:%d, hMove:%d, enter:%b, newGame:%b, 
+        //  reset: %b, win:%b",
+        //  dut.currState.name, dut.nextState.name, {c3, c2, c1, c0, h3, h2, h1, h0}, 
+        //  cMove, hMove, enter, newGame, reset, win);
+        clock = 1'b0;
+        reset <= 1'b1;
+        reset <= 1'b0;
+        newGame = 1'b0;
+        enter = 1'b0;
+        
+        forever #5 clock = ~clock;
+    end
+    initial begin
+        // TB testing order
+        // C_5 Tests
+            // C_5_I tests
+
+        //Section 1 Tests ( CMOVE 1,3,5, HMOVE: 6,9)
+        // C_1_5_H_6 Test
+            // C_1_5_H_6_I tests
+                // C_1_5_H_6_9_E
+                    // C_1_3_5_H_6_9 Tests
+                        // C_1_3_5_H_6_9_I test
+
+                            //section 1a (hMove:2)
+                                // C_1_3_5_H_2_6_9_E
+                                // C_1_3_5_7_H_2_6_9_W
+                                // C_1_3_5_7_H_2_6_9_W_N
+                            //section 1b (hMove: 4)
+                                //C_1_3_5_H_4_6_9_E
+                                //C_1_2_3_5_H_4_6_9_W
+                                //C_1_2_3_5_H_4_6_9_W_N
+                            //section 1c (hMove: 7)
+                                //C_1_3_5_H_6_7_9_E
+                                //C_1_2_3_5_H_6_7_9_W
+                                //C_1_2_3_5_H_6_7_9_W_N
+                            //section 1d (hMove: 8)
+                                //C_1_3_5_H_6_8_9_E
+                                //C_1_2_3_5_H_6_8_9_W
+                                //C_1_2_3_5_H_6_8_9_W_N
+
+
+
+
+
+
+        //C_5 TESTS
+        #5
+
+        //C_5_I test INVALID 
+        hMove = 4'd3; // invalid
+        enter = 1'b1; 
+        #5                  // dont know if need this?
+        enter = 1'b0; // release enter
+
+        #5 
+        //c_5_H_6_E Valid 6 move
+        hMove = 4'd6;
+        enter = 1'b1;
+        #5
+
+        //SECTION ONE TESTING START
+        //C_1_5_H_6 TESTS 
+        enter = 1'b0;
+        #5 
+
+
+
+
+
+        //ERROR OCCURING HERE?
+
+
+
+
+
+        //C_1_5_H_6_I invalid
+
+        hMove = 4'd5;
+        enter = 1'b1;
+        #5 
+        enter = 1'b0;
+
+
+        //C_1_5_H_6_9_E 
+
+        hMove = 4'd9;
+        enter = 1'b1;
+        //hMove = 4'd3; // test that enter isnt affected
+        #5
+        //C_1_3_5_H_6_9 TESTS
+        enter = 1'b0;
+        #5
+
+        //C_1_3_5_H_6_9_I test
+        hMove = 4'd1;
+        enter = 1'b1;
+        #5
+        enter = 1'b0;
+
+        //SECTION 1A (hMove = 2 TETS)
+
+        //C_1_3_5_H_2_6_9_E
+        hMove = 4'd2;
+        enter = 1'b1;
+        #5
+        //C_1_3_5_7_H_2_6_9_W
+        enter = 1'b0;
+        //C_1_3_5_7_H_2_6_9_WN
+        newGame = 1'b1;
+        #5
+        newGame = 1'b0;
+
+        // 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $finish;
+    end
+
+
+
+
+
+
+
+
+endmodule: task5_test
