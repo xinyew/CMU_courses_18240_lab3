@@ -61,7 +61,7 @@ module task5 (
             nextState = C_5_I;
           else
             nextState = C_5_H_6_E;
-		  end
+        end
 		  else
 		    nextState = C_5;    	
       end
@@ -78,7 +78,8 @@ module task5 (
             4'd8: nextState = C_1_5_H_6_8_E;
             4'd9: nextState = C_1_5_H_6_9_E;
           endcase
-			 
+        else
+          nextState = C_1_5_H_6;
       end
       C_1_3_5_H_6_9:
         if (enter)
@@ -93,86 +94,169 @@ module task5 (
             4'd7: nextState = C_1_3_5_H_6_7_9_E;
             4'd8: nextState = C_1_3_5_H_6_8_9_E;
           endcase
-
+        else
+          nextState = C_1_3_5_H_6_9;
       C_5_H_6_E:
         if (~enter)
           nextState = C_1_5_H_6;
+        else
+          nextState = C_5_H_6_E;
       C_1_5_H_2_6_E:
         if (~enter)
           nextState = C_1_5_9_H_2_6_W;
+        else
+          nextState = C_1_5_H_2_6_E;
       C_1_5_H_3_6_E:
         if (~enter)
           nextState = C_1_5_9_H_3_6_W;
+        else:
+          nextState = C_1_5_H_3_6_E;
       C_1_5_H_4_6_E:
         if (~enter)
           nextState = C_1_5_9_H_4_6_W;
+        else
+          nextState = C_1_5_H_4_6_E;
       C_1_5_H_6_7_E:
         if (~enter)
           nextState = C_1_5_9_H_6_7_W;
+        else
+          nextState = C_1_5_H_6_7_E;
       C_1_5_H_6_8_E:
         if (~enter)
           nextState = C_1_5_9_H_6_8_W;
+        else
+          nextState = C_1_5_H_6_8_E;
       C_1_5_H_6_9_E:
         if (~enter)
           nextState = C_1_3_5_H_6_9;
+        else
+          nextState = C_1_5_H_6_9_E;
       C_1_3_5_H_2_6_9_E:
         if (~enter)
           nextState = C_1_3_5_7_H_2_6_9_W;
+        else
+          nextState = C_1_3_5_H_2_6_9_E;
       C_1_3_5_H_4_6_9_E:
         if (~enter)
           nextState = C_1_2_3_5_H_4_6_9_W;
+        else
+          nextState = C_1_3_5_H_4_6_9_E;
       C_1_3_5_H_6_7_9_E:
         if (~enter)
           nextState = C_1_2_3_5_H_6_7_9_W;
+        else
+          nextState = C_1_3_5_H_6_7_9_E;
       C_1_3_5_H_6_8_9_E:
         if (~enter)
           nextState = C_1_2_3_5_H_6_8_9_W;
+        else
+          nextState = C_1_3_5_H_6_8_9_E;
 
       C_1_5_9_H_2_6_W:
         if (newGame)
           nextState = C_1_5_9_H_2_6_W_N;
+        else
+          nextState = C_1_5_9_H_2_6_W;
       C_1_5_9_H_3_6_W:
         if (newGame)
           nextState = C_1_5_9_H_3_6_W_N;
+        else
+          nextState = C_1_5_9_H_3_6_W;
       C_1_5_9_H_4_6_W:
         if (newGame)
           nextState = C_1_5_9_H_4_6_W_N;
+        else
+          nextState = C_1_5_9_H_4_6_W;
       C_1_5_9_H_6_7_W:
         if (newGame)
           nextState = C_1_5_9_H_6_7_W_N;
+        else
+          nextState = C_1_5_9_H_6_7_W;
       C_1_5_9_H_6_8_W:
         if (newGame)
           nextState = C_1_5_9_H_6_8_W_N;
+        else
+          nextState = C_1_5_9_H_6_8_W;
       C_1_3_5_7_H_2_6_9_W:
         if (newGame)
           nextState = C_1_3_5_7_H_2_6_9_W_N;
+        else
+          nextState = C_1_3_5_7_H_2_6_9_W;
       C_1_2_3_5_H_4_6_9_W:
         if (newGame)
           nextState = C_1_2_3_5_H_4_6_9_W_N;
+        else
+          C_1_2_3_5_H_4_6_9_W;
       C_1_2_3_5_H_6_7_9_W:
         if (newGame)
           nextState = C_1_2_3_5_H_6_7_9_W_N;
+        else
+          nextState = C_1_2_3_5_H_6_7_9_W;
       C_1_2_3_5_H_6_8_9_W:
         if (newGame)
           nextState = C_1_2_3_5_H_6_8_9_W_N;
+        else
+          nextState = C_1_2_3_5_H_6_8_9_W;
 
-      C_5_I,
-      C_1_5_H_6_I,
+      C_5_I:
+        if (~enter)
+          nextState = C_5;
+        else
+          nextState = C_5_I;
+      C_1_5_H_6_I:
+        if (~enter)
+          nextState = C_5;
+        else
+          C_1_5_H_6_I;
       C_1_3_5_H_6_9_I:
         if (~enter)
           nextState = C_5;
+        else
+          nextState = C_1_3_5_H_6_9_I;
 
-      C_1_5_9_H_2_6_W_N,
-      C_1_5_9_H_3_6_W_N,
-      C_1_5_9_H_4_6_W_N,
-      C_1_5_9_H_6_7_W_N,
-      C_1_5_9_H_6_8_W_N,
-      C_1_2_3_5_H_4_6_9_W_N,
-      C_1_2_3_5_H_6_7_9_W_N,
-      C_1_2_3_5_H_6_8_9_W_N,
+      C_1_5_9_H_2_6_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_2_6_W_N;
+      C_1_5_9_H_3_6_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_3_6_W_N;
+      C_1_5_9_H_4_6_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_4_6_W_N;
+      C_1_5_9_H_6_7_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_6_7_W_N;
+      C_1_5_9_H_6_8_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_5_9_H_6_8_W_N;
+      C_1_2_3_5_H_4_6_9_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_2_3_5_H_4_6_9_W_N;
+      C_1_2_3_5_H_6_7_9_W_N:
+        if (~newGame)
+          nextState = C_5;
+        else
+          nextState = C_1_2_3_5_H_6_7_9_W_N;
+      C_1_2_3_5_H_6_8_9_W_N:
+        if (~newGame)
+          nextState = C_5;
       C_1_3_5_7_H_2_6_9_W_N:
         if (~newGame)
           nextState = C_5;
+        else
+          nextState = C_1_3_5_7_H_2_6_9_W_N;
     endcase
   end
 
