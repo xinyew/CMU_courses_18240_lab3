@@ -304,7 +304,7 @@ always_comb begin
     end
 
     if (currState == C_1_2_3_5_H_6_8_9_W_N) begin
-      cMove = 4'h7;
+      cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
       c2 = 4'd2;
