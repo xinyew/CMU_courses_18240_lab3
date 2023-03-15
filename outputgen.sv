@@ -3,7 +3,7 @@ always_comb begin
 	 cMove = 4'b0000;
 	 win = 1'b1;
      {c3, c2, c1, c0, h3, h2, h1, h0} = 32'b0;
-    if (currState == c_5) begin
+	if (currState == C_5) begin
       cMove = 4'h5;
       win = 0;
       c3 = 4'd5;
