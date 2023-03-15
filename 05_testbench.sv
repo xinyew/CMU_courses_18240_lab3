@@ -98,8 +98,134 @@ module testbench();
     @(posedge clock); // #470 C_5_H_6_E
     enter_L <= 1'd1;
     @(posedge clock); // #490 C_1_5_H_6
-    
-
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+     enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6   
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
+    enter_L <= 1'd0;
+    @(posedge clock); // #470 C_5_H_6_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #490 C_1_5_H_6
     #1 $finish;
   end
 endmodule : testbench
