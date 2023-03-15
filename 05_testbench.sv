@@ -24,8 +24,8 @@ h3: %d h2: %d h1: %d h0: %d c3: %d c2: %d c1: %d c0: %d",
     // C_5
     hMove <= 4'd4;
     enter_L <= 1'd0;
-    @(posedge clock) // #10 C_5
-    @(posedge clock) // #30 C_5
+    @(posedge clock) // #10 C_5_I
+    @(posedge clock) // #30
     enter_L <= 1'd1;
     @(posedge clock) // #50 C_5
     hMove <= 4'd6;
