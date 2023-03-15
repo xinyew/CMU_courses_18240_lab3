@@ -10,7 +10,7 @@ module chipInterface
   
   logic ww;
 
-  task5 S0 (.newGame(KEY[0]), 
+  task5(.newGame(KEY[0]), 
             .clock(CLOCK_50), 
 				.h3(h_3), 
 				.h2(h_2), 
@@ -30,14 +30,14 @@ module chipInterface
   logic [7:0] blank;
   assign blank = 8'b00000000;
 
-  SevenSegmentDisplay s1 (.BCX(h_3), .blank(blank), .HEX(HEX7));
-  SevenSegmentDisplay s2 (.BCX(h_2), .blank(blank), .HEX(HEX6));
-  SevenSegmentDisplay s3 (.BCX(h_1), .blank(blank), .HEX(HEX5));
-  SevenSegmentDisplay s4 (.BCX(h_0), .blank(blank), .HEX(HEX4));
-  SevenSegmentDisplay s5 (.BCX(c_3), .blank(blank), .HEX(HEX3));
-  SevenSegmentDisplay s6 (.BCX(c_2), .blank(blank), .HEX(HEX2));
-  SevenSegmentDisplay s7 (.BCX(c_1), .blank(blank), .HEX(HEX1));
-  SevenSegmentDisplay s8 (.BCX(c_0), .blank(blank), .HEX(HEX0));
+  SevenSegmentDisplay(.BCX0(h_3), .blank(blank), .HEX0(HEX7));
+  SevenSegmentDisplay(.BCX0(h_2), .blank(blank), .HEX0(HEX6));
+  SevenSegmentDisplay(.BCX0(h_1), .blank(blank), .HEX0(HEX5));
+  SevenSegmentDisplay(.BCX0(h_0), .blank(blank), .HEX0(HEX4));
+  SevenSegmentDisplay(.BCX0(c_3), .blank(blank), .HEX0(HEX3));
+  SevenSegmentDisplay(.BCX0(c_2), .blank(blank), .HEX0(HEX2));
+  SevenSegmentDisplay(.BCX0(c_1), .blank(blank), .HEX0(HEX1));
+  SevenSegmentDisplay(.BCX0(c_0), .blank(blank), .HEX0(HEX0));
 
 
 endmodule: chipInterface 

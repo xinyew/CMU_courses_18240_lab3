@@ -109,7 +109,7 @@ module task5 (
       C_1_5_H_3_6_E:
         if (~enter)
           nextState = C_1_5_9_H_3_6_W;
-        else:
+        else
           nextState = C_1_5_H_3_6_E;
       C_1_5_H_4_6_E:
         if (~enter)
@@ -186,7 +186,7 @@ module task5 (
         if (newGame)
           nextState = C_1_2_3_5_H_4_6_9_W_N;
         else
-          C_1_2_3_5_H_4_6_9_W;
+          nextState = C_1_2_3_5_H_4_6_9_W;
       C_1_2_3_5_H_6_7_9_W:
         if (newGame)
           nextState = C_1_2_3_5_H_6_7_9_W_N;
@@ -207,7 +207,7 @@ module task5 (
         if (~enter)
           nextState = C_5;
         else
-          C_1_5_H_6_I;
+          nextState = C_1_5_H_6_I;
       C_1_3_5_H_6_9_I:
         if (~enter)
           nextState = C_5;
@@ -252,6 +252,8 @@ module task5 (
       C_1_2_3_5_H_6_8_9_W_N:
         if (~newGame)
           nextState = C_5;
+		  else
+		    nextState = C_1_2_3_5_H_6_8_9_W_N;
       C_1_3_5_7_H_2_6_9_W_N:
         if (~newGame)
           nextState = C_5;
