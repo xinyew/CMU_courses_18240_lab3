@@ -1,13 +1,13 @@
 `default_nettype none
 
 module testBench();
-    logic w1, w2, w3, w4, w5, w6;
-    logic [3:0] w7, w8;
-    myAbstractFSM dut1(.clock(w1),
-                       .reset(w2),
-                       .win(w6),
-                       .cMove(w7),
-                       .hMove(w8));
+    logic [3:0] cMove, hMove;
+    logic clock, reset, win;
+    myAbstractFSM dut1(.clock(clock),
+                       .reset(reset),
+                       .win(win),
+                       .cMove(cMove),
+                       .hMove(hMove));
     
     initial begin
         clock = 0;
