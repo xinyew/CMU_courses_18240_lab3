@@ -684,6 +684,7 @@ module task5_test ();
 
 
         //C_5 TESTS
+        #5
 
         //C_5_I test INVALID 
         hMove = 4'd3; // invalid
@@ -697,11 +698,20 @@ module task5_test ();
         enter = 1'b1;
         #5
 
-
         //SECTION ONE TESTING START
         //C_1_5_H_6 TESTS 
         enter = 1'b0;
         #5 
+
+
+
+
+
+        //ERROR OCCURING HERE?
+
+
+
+
 
         //C_1_5_H_6_I invalid
 
@@ -711,11 +721,11 @@ module task5_test ();
         enter = 1'b0;
 
 
-        //C_1_5_H_6_9_E
+        //C_1_5_H_6_9_E 
 
         hMove = 4'd9;
         enter = 1'b1;
-        hMove = 4'd3; // test that enter isnt affected
+        //hMove = 4'd3; // test that enter isnt affected
         #5
         //C_1_3_5_H_6_9 TESTS
         enter = 1'b0;
@@ -740,7 +750,22 @@ module task5_test ();
         #5
         newGame = 1'b0;
 
-        //
+        // 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
