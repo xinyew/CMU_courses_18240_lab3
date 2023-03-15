@@ -127,19 +127,19 @@ module task5 (
       
       C_1_5_9_H_2_6_W:
         if (newGame)
-          nextState = C_1_5_9_H_2_6_W_N
+          nextState = C_1_5_9_H_2_6_W_N;
       C_1_5_9_H_3_6_W:
         if (newGame)
-          nextState = C_1_5_9_H_3_6_W_N
+          nextState = C_1_5_9_H_3_6_W_N;
       C_1_5_9_H_4_6_W:
         if (newGame)
-          nextState = C_1_5_9_H_4_6_W_N
+          nextState = C_1_5_9_H_4_6_W_N;
       C_1_5_9_H_6_7_W:
         if (newGame)
-          nextState = C_1_5_9_H_6_7_W_N
+          nextState = C_1_5_9_H_6_7_W_N;
       C_1_5_9_H_6_8_W:
         if (newGame)
-          nextState = C_1_5_9_H_6_8_W_N
+          nextState = C_1_5_9_H_6_8_W_N;
       C_1_3_5_7_H_2_6_9_W:
         if (newGame)
           nextState = C_1_3_5_7_H_2_6_9_W_N;
