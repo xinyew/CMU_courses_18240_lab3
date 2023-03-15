@@ -5,15 +5,15 @@ module task5 (
   output logic       win,
   output logic [3:0] h3, h2, h1, h0, c3, c2, c1, c0,
   input  logic [3:0] hMove,
-  input  logic       clock, reset, enter, newGame);
+  input  logic       clock, reset, enter_L, newGame_L);
 
   // C_1_2_H_3_4_E_I means that
   // computer's move: 1, 2
   // human move: 3, 4
-  // enter pressed
+  // enter_L pressed
   // this is an invalid move
   // 'W' means that computer wins
-  // 'N' means that newGame pressed
+  // 'N' means that newGame_L pressed
   enum logic [5:0] {
                     C_5 = 6'd0,
                     C_5_I = 6'd1,
@@ -56,7 +56,7 @@ module task5 (
   always_comb begin
     unique case (currState)
       C_5: begin
-        if (enter) begin
+        if (enter_L) begin
           if (hMove != 4'd6)
             nextState = C_5_I;
           else
@@ -66,7 +66,7 @@ module task5 (
 		    nextState = C_5;    	
       end
       C_1_5_H_6: begin
-        if (enter)
+        if (enter_L)
           unique case (hMove)
             4'd1,
             4'd5,
@@ -82,7 +82,7 @@ module task5 (
           nextState = C_1_5_H_6;
       end
       C_1_3_5_H_6_9:
-        if (enter)
+        if (enter_L)
           unique case (hMove)
             4'd1,
             4'd3,
@@ -97,165 +97,165 @@ module task5 (
         else
           nextState = C_1_3_5_H_6_9;
       C_5_H_6_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_5_H_6;
         else
           nextState = C_5_H_6_E;
       C_1_5_H_2_6_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_5_9_H_2_6_W;
         else
           nextState = C_1_5_H_2_6_E;
       C_1_5_H_3_6_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_5_9_H_3_6_W;
         else
           nextState = C_1_5_H_3_6_E;
       C_1_5_H_4_6_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_5_9_H_4_6_W;
         else
           nextState = C_1_5_H_4_6_E;
       C_1_5_H_6_7_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_5_9_H_6_7_W;
         else
           nextState = C_1_5_H_6_7_E;
       C_1_5_H_6_8_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_5_9_H_6_8_W;
         else
           nextState = C_1_5_H_6_8_E;
       C_1_5_H_6_9_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_3_5_H_6_9;
         else
           nextState = C_1_5_H_6_9_E;
       C_1_3_5_H_2_6_9_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_3_5_7_H_2_6_9_W;
         else
           nextState = C_1_3_5_H_2_6_9_E;
       C_1_3_5_H_4_6_9_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_2_3_5_H_4_6_9_W;
         else
           nextState = C_1_3_5_H_4_6_9_E;
       C_1_3_5_H_6_7_9_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_2_3_5_H_6_7_9_W;
         else
           nextState = C_1_3_5_H_6_7_9_E;
       C_1_3_5_H_6_8_9_E:
-        if (~enter)
+        if (~enter_L)
           nextState = C_1_2_3_5_H_6_8_9_W;
         else
           nextState = C_1_3_5_H_6_8_9_E;
 
       C_1_5_9_H_2_6_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_5_9_H_2_6_W_N;
         else
           nextState = C_1_5_9_H_2_6_W;
       C_1_5_9_H_3_6_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_5_9_H_3_6_W_N;
         else
           nextState = C_1_5_9_H_3_6_W;
       C_1_5_9_H_4_6_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_5_9_H_4_6_W_N;
         else
           nextState = C_1_5_9_H_4_6_W;
       C_1_5_9_H_6_7_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_5_9_H_6_7_W_N;
         else
           nextState = C_1_5_9_H_6_7_W;
       C_1_5_9_H_6_8_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_5_9_H_6_8_W_N;
         else
           nextState = C_1_5_9_H_6_8_W;
       C_1_3_5_7_H_2_6_9_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_3_5_7_H_2_6_9_W_N;
         else
           nextState = C_1_3_5_7_H_2_6_9_W;
       C_1_2_3_5_H_4_6_9_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_2_3_5_H_4_6_9_W_N;
         else
           nextState = C_1_2_3_5_H_4_6_9_W;
       C_1_2_3_5_H_6_7_9_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_2_3_5_H_6_7_9_W_N;
         else
           nextState = C_1_2_3_5_H_6_7_9_W;
       C_1_2_3_5_H_6_8_9_W:
-        if (newGame)
+        if (newGame_L)
           nextState = C_1_2_3_5_H_6_8_9_W_N;
         else
           nextState = C_1_2_3_5_H_6_8_9_W;
 
       C_5_I:
-        if (~enter)
+        if (~enter_L)
           nextState = C_5;
         else
           nextState = C_5_I;
       C_1_5_H_6_I:
-        if (~enter)
+        if (~enter_L)
           nextState = C_5;
         else
           nextState = C_1_5_H_6_I;
       C_1_3_5_H_6_9_I:
-        if (~enter)
+        if (~enter_L)
           nextState = C_5;
         else
           nextState = C_1_3_5_H_6_9_I;
 
       C_1_5_9_H_2_6_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_5_9_H_2_6_W_N;
       C_1_5_9_H_3_6_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_5_9_H_3_6_W_N;
       C_1_5_9_H_4_6_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_5_9_H_4_6_W_N;
       C_1_5_9_H_6_7_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_5_9_H_6_7_W_N;
       C_1_5_9_H_6_8_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_5_9_H_6_8_W_N;
       C_1_2_3_5_H_4_6_9_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_2_3_5_H_4_6_9_W_N;
       C_1_2_3_5_H_6_7_9_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_2_3_5_H_6_7_9_W_N;
       C_1_2_3_5_H_6_8_9_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
 		  else
 		    nextState = C_1_2_3_5_H_6_8_9_W_N;
       C_1_3_5_7_H_2_6_9_W_N:
-        if (~newGame)
+        if (~newGame_L)
           nextState = C_5;
         else
           nextState = C_1_3_5_7_H_2_6_9_W_N;
