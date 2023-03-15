@@ -174,7 +174,11 @@ module task5 (
   end
 
   
+<<<<<<< HEAD
   // output generation
+=======
+>>>>>>> 8dc265786148dc6b416da785f5e9af4fc840c891
+
 always_comb begin
 	 cMove = 4'b0000;
 	 win = 1'b1;

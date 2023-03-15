@@ -1,3 +1,4 @@
+
 always_comb begin
 	 cMove = 4'b0000;
 	 win = 1'b1;
@@ -266,7 +267,7 @@ always_comb begin
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_6_7_9_W) begin
+    if (currState == C_1_2_3_5_H_6_7_9_W) begin 
       cMove = 4'h2;
       win = 1;
       c3 = 4'd1;
@@ -316,7 +317,7 @@ always_comb begin
 
     end
 
-    if (currState == C_1_3_5_H_2_6_9_W) begin
+    if (currState == C_1_3_5_7_H_2_6_9_W) begin
       cMove = 4'h7;
       win = 1;
       c3 = 4'd1;
@@ -328,7 +329,7 @@ always_comb begin
       h1 = 4'd9;
     end
 
-    if (currState == C_1_3_5_H_2_6_9_W_N) begin
+    if (currState == C_1_3_5_7_H_2_6_9_W_N) begin
       cMove = 4'h7;
       win = 1;
       c3 = 4'd1;
