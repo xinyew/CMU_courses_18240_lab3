@@ -47,6 +47,20 @@ module testbench();
     @(posedge clock); // #210 C_1_5_H_6_9_E
     enter_L <= 1'd1;
     @(posedge clock); // #230 C_1_3_5_H_6_9
+    enter_L <= 1'd0;
+    @(posedge clock); // #250 C_1_3_5_H_6_9_I
+    @(posedge clock); // #270 C_1_3_5_H_6_9_I
+    enter_L <= 1'd1;
+    @(posedge clock); // #290 C_1_3_5_H_6_9
+    hMove <= 4'd2;
+    @(posedge clock); // #310 C_1_3_5_H_6_9
+    enter_L <= 1'd0;
+    @(posedge clock); // #330 C_1_3_5_H_2_6_9_E
+    @(posedge clock); // #350 C_1_3_5_H_2_6_9_E
+    enter_L <= 1'd1;
+    @(posedge clock); // #370 C_1_3_5_7_H_2_6_9_W
+    
+
     #1 $finish;
   end
 endmodule : testbench
