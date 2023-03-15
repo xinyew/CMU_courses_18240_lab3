@@ -16,7 +16,7 @@ module testBench();
 
     initial begin
         $monitor($time,, "state=%s, cMove=%d, hMove=%d, win=%b",
-                 dut1.state.name, cMove, hMove, win);
+                 dut1.currState.name, cMove, hMove, win);
         // initialize values
         hMove <= 4'hF; 
         reset <= 1'b1;
