@@ -3,13 +3,13 @@ module dFlipFlopcI(
   output logic q,
   input  logic d, clock, reset);
 
-  always_ff @(posedge clock)
+  always_ff @(posedge clock, posedge reset)
     if (reset == 1'b1)
       q <= 0;
     else
       q <= d;
-
 endmodule : dFlipFlopcI
+
 module chipInterface
   (input logic [3:0] KEY,
   input logic [17:0] SW,
@@ -40,15 +40,27 @@ module chipInterface
   assign LEDG = {ww, ww, ww, ww, ww, ww, ww, ww};
   logic [7:0] blank;
   assign blank = 8'b00000000;
-  
+  logic reset;
+  logic a1, a2, b1, b2;
+  assign reset = 0;
   dFlipFlopcI ff0(.d(KEY[3]),
-                .q(enter_L),
+                .q(a1),
                 .clock(CLOCK_50),
-                .reset(SW[17])),
-              ff1(.d(KEY[0]),
-                .q(newGame_L),
+                .reset(reset)),
+              ff1(.d(a1),
+                .q(a2),
                 .clock(CLOCK_50),
-                .reset(SW[17]));
+                .reset(reset));
+  dFlipFlopcI ff2(.d(KEY[3]),
+                .q(b1),
+                .clock(CLOCK_50),
+                .reset(reset)),
+              ff3(.d(b1),
+                .q(b2),
+                .clock(CLOCK_50),
+                .reset(reset));
+
+  
 
   SevenSegmentDisplay(.BCX0(h_3), .blank(blank), .HEX0(HEX7));
   SevenSegmentDisplay(.BCX0(h_2), .blank(blank), .HEX0(HEX6));
@@ -61,5 +73,3 @@ module chipInterface
 
 
 endmodule: chipInterface 
-
-
