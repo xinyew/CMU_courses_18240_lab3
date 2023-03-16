@@ -1,6 +1,0 @@
-{"vcs1":{"timestamp_begin":1677640206.130349786, "rt":0.08, "ut":0.04, "st":0.01}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1677640206.003724592}
-{"VCS_COMP_START_TIME": 1677640206.003724592}
-{"VCS_COMP_END_TIME": 1677640206.236574658}
-{"VCS_USER_OPTIONS": "-sverilog -cm line -cm_line contassign 01_struc.sv 02_abstract.sv HexDisplay.sv tb1.sv tb.sv"}
-{"vcs1": {"peak_mem": 322000}}
