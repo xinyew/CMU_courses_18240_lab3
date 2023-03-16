@@ -47,77 +47,138 @@ module myExplicitFSM(
                 .reset(reset));
 
   // next state generation
-  assign d2 = ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) | 
-              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-              ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
+  assign d2 = ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+  & (~hMove[0])) | 
+              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+              & (~hMove[0])) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] 
+              & hMove[0]) |
+              ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & (~hMove[0])) |
 
-              (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-              (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-              (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-              (q2 & (~q1) & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-              (q2 & (~q1) & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
+              (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & (~hMove[1])
+               & hMove[0]) |
+              (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1]
+               & (~hMove[0])) |
+              (q2 & (~q1) & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+              & hMove[0]) |
+              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & (~hMove[0])) |
+              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & hMove[0]) |
+              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] 
+              & (~hMove[0])) |
+              (q2 & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] 
+              & hMove[0]) |
+              (q2 & (~q1) & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & (~hMove[0])) |
+              (q2 & (~q1) & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
 
-              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-              (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-              (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]);
+              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1])
+               & hMove[0]) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+              & (~hMove[0])) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+              & hMove[0]) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1])
+               & (~hMove[0])) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & hMove[0]) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] 
+              & (~hMove[0])) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1]
+               & hMove[0]) |
+              (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1])
+              & (~hMove[0])) |
+              (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]);
 
-  assign d1 = ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-              ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-              ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-              ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-              ((~q2) & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-              ((~q2) & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
+  assign d1 = ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+  & (~hMove[0])) |
+              ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+              & hMove[0]) |
+              ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & (~hMove[0])) |
+              ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] 
+              & hMove[0]) |
+              ((~q2) & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & (~hMove[0])) |
+              ((~q2) & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
 
-              ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-              ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-              ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-              ((~q2) & q1 & (~q0) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-              ((~q2) & q1 & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
+              ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
+              ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1]
+              & (~hMove[0])) |
+              ((~q2) & q1 & (~q0) & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+              & hMove[0]) |
+              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1])
+               & (~hMove[0])) |
+              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & hMove[0]) |
+              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] 
+              & (~hMove[0])) |
+              ((~q2) & q1 & (~q0) & (~hMove[3]) & hMove[2] & hMove[1]
+               & hMove[0]) |
+              ((~q2) & q1 & (~q0) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & (~hMove[0])) |
+              ((~q2) & q1 & (~q0) & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
 
-              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-              ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]);
+              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1])
+               & hMove[0]) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1]
+               & hMove[0]) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & hMove[0]) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] 
+              & (~hMove[0])) |
+              ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]);
 
-  assign d0 = ((~q2) & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
+  assign d0 = ((~q2) & (~q1) & (~q0) & (~hMove[3]) & hMove[2] & hMove[1] 
+  & (~hMove[0])) |
 
-              ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-              ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-              ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
+              ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
+              ((~q2) & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & hMove[0]) |
+              ((~q2) & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
 
 
-              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-              ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1]
+               & (~hMove[0])) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1]
+               & hMove[0]) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & hMove[0]) |
+              ((~q2) & q1 & q0 & (~hMove[3]) & hMove[2] & hMove[1]
+               & (~hMove[0])) |
+              ((~q2) & q1 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
 
-              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) & hMove[0]) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & (~hMove[0])) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] & hMove[0]) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & (~hMove[0])) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) & hMove[0]) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & (~hMove[0])) |
-              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] & hMove[0]) |
-              (q2 & (~q1) & q0 & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & (~hMove[0])) |
-              (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1]) & hMove[0]);
+              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & (~hMove[1]) 
+              & hMove[0]) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1]
+               & (~hMove[0])) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & (~hMove[2]) & hMove[1] 
+              & hMove[0]) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1]) 
+              & (~hMove[0])) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & (~hMove[1])
+               & hMove[0]) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1]
+               & (~hMove[0])) |
+              (q2 & (~q1) & q0 & (~hMove[3]) & hMove[2] & hMove[1] 
+              & hMove[0]) |
+              (q2 & (~q1) & q0 & q0 & hMove[3] & (~hMove[2]) 
+              & (~hMove[1]) & (~hMove[0])) |
+              (q2 & (~q1) & q0 & hMove[3] & (~hMove[2]) & (~hMove[1])
+               & hMove[0]);
 
   // output logic generation
   assign cMove[3] = (~q2) & q1 & (~q0);

@@ -11,20 +11,20 @@ module chipInterface
   logic ww;
 
   task5(.newGame_L(KEY[0]), 
-            .clock(CLOCK_50), 
-				.h3(h_3), 
-				.h2(h_2), 
-				.h1(h_1), 
-            .h0(h_0), 
-				.c3(c_3), 
-				.c2(c_2), 
-				.c1(c_1), 
-				.c0(c_0), 
-				.enter_L(KEY[3]), 
-				.reset(SW[17]),
-				.hMove(SW[3:0]), 
-				.cMove(LEDR[3:0]), 
-				.win(ww));
+         .clock(CLOCK_50), 
+         .h3(h_3), 
+         .h2(h_2), 
+         .h1(h_1), 
+         .h0(h_0), 
+         .c3(c_3), 
+         .c2(c_2), 
+         .c1(c_1), 
+         .c0(c_0), 
+         .enter_L(KEY[3]), 
+         .reset(SW[17]),
+         .hMove(SW[3:0]), 
+         .cMove(LEDR[3:0]), 
+         .win(ww));
 
   assign LEDG = {ww, ww, ww, ww, ww, ww, ww, ww};
   logic [7:0] blank;
