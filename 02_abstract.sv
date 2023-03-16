@@ -16,18 +16,19 @@ module myAbstractFSM (
       S0: 
         nextState = (hMove == 4'h6) ? S1 : S0;
       S1: begin
-		  if (hMove == 4'h1 || hMove == 4'h5 || hMove == 4'h6)
-		    nextState = S1;
-		  else
+        if (hMove == 4'h1 || hMove == 4'h5 || hMove == 4'h6)
+          nextState = S1;
+        else
           nextState = (hMove == 4'h9) ? S3 : S2;
-      end	 
+      end
       S2:
         nextState = S2;
       S3: begin
-		  if (hMove == 4'h1 || hMove == 4'h4 || hMove == 4'h5 || hMove == 4'h6 || hMove == 4'h9)
-		    nextState = S3;
-		  else
-          nextState = (hMove == 4'h2) ? S5 : S4;
+        if (hMove == 4'h1 || hMove == 4'h4 || hMove == 4'h5 || hMove == 4'h6 
+        || hMove == 4'h9)
+          nextState = S3;
+        else
+            nextState = (hMove == 4'h2) ? S5 : S4;
       end
       S4:
         nextState = S4;
@@ -38,8 +39,8 @@ module myAbstractFSM (
   
   // output generation
   always_comb begin
-	 cMove = 4'b0000;
-	 win = 1'b1;
+    cMove = 4'b0000;
+    win = 1'b1;
     if (currState == S0) begin
       cMove = 4'h5;
       win = 0;

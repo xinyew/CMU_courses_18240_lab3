@@ -1,5 +1,4 @@
 `default_nettype none
-
 module task5 (
   output logic [3:0] cMove,
   output logic       win,
@@ -62,8 +61,8 @@ module task5 (
           else
             nextState = C_5_H_6_E;
         end
-		  else
-		    nextState = C_5;    	
+        else
+          nextState = C_5;
       end
       C_1_5_H_6: begin
         if (~enter_L)
@@ -252,8 +251,8 @@ module task5 (
       C_1_2_3_5_H_6_8_9_W_N:
         if (newGame_L)
           nextState = C_5;
-		  else
-		    nextState = C_1_2_3_5_H_6_8_9_W_N;
+        else
+          nextState = C_1_2_3_5_H_6_8_9_W_N;
       C_1_3_5_7_H_2_6_9_W_N:
         if (newGame_L)
           nextState = C_5;
@@ -265,9 +264,9 @@ module task5 (
 
 
 always_comb begin
-	 cMove = 4'b0000;
-	 win = 1'b1;
-     {c3, c2, c1, c0, h3, h2, h1, h0} = 32'b0;
+    cMove = 4'b0000;
+    win = 1'b1;
+    {c3, c2, c1, c0, h3, h2, h1, h0} = 32'b0;
     if (currState == C_5) begin
       cMove = 4'h5;
       win = 0;
@@ -499,7 +498,7 @@ always_comb begin
       win = 0;
       c3 = 4'd1;
       c2 = 4'd3;
-      c1 = 4'd5;			
+      c1 = 4'd5;
       h3 = 4'd6;
       h2 = 4'd9;
     end

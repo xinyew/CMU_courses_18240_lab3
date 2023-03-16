@@ -7,7 +7,8 @@ module chipInterface
   logic [3:0] c;
   
   logic ww;
-  myAbstractFSM(.clock(KEY[0]), .reset(SW[17]), .hMove(SW[9:6]), .cMove(c), .win(ww));
+  myAbstractFSM(.clock(KEY[0]), .reset(SW[17]), .hMove(SW[9:6]), .cMove(c), 
+  .win(ww));
   assign LEDG = {ww, ww, ww, ww, ww, ww, ww, ww};
   logic [7:0] blank;
   assign blank = 8'b00000000;
