@@ -1,4 +1,15 @@
 `default_nettype none // Required in every sv file
+module dFlipFlopcI(
+  output logic q,
+  input  logic d, clock, reset);
+
+  always_ff @(posedge clock)
+    if (reset == 1'b1)
+      q <= 0;
+    else
+      q <= d;
+
+endmodule : dFlipFlopcI
 module chipInterface
   (input logic [3:0] KEY,
   input logic [17:0] SW,
@@ -29,6 +40,15 @@ module chipInterface
   assign LEDG = {ww, ww, ww, ww, ww, ww, ww, ww};
   logic [7:0] blank;
   assign blank = 8'b00000000;
+  
+  dFlipFlopcI ff0(.d(KEY[3]),
+                .q(enter_L),
+                .clock(CLOCK_50),
+                .reset(SW[17])),
+              ff1(.d(KEY[0]),
+                .q(newGame_L),
+                .clock(CLOCK_50),
+                .reset(SW[17]));
 
   SevenSegmentDisplay(.BCX0(h_3), .blank(blank), .HEX0(HEX7));
   SevenSegmentDisplay(.BCX0(h_2), .blank(blank), .HEX0(HEX6));
